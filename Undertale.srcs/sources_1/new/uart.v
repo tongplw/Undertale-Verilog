@@ -23,11 +23,12 @@
 module uart(
     input clk,
     input RsRx,
-    output RsTx
+    output RsTx,
+    output reg [7:0] data_in,
+    output reg ena
     );
     
-    reg ena, last_rec;
-    reg [7:0] data_in;
+    reg last_rec;
     wire [7:0] data_out;
     wire sent, received, baud;
     

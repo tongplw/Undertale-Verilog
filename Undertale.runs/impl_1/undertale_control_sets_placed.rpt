@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu May 21 16:39:42 2020
+| Date         : Thu May 21 19:21:19 2020
 | Host         : tongplw running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file undertale_control_sets_placed.rpt
 | Design       : undertale
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     3 |
-| Unused register locations in slices containing registers |     7 |
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |    14 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,7 +35,10 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      1 |            1 |
-|    16+ |            2 |
+|      2 |            1 |
+|      8 |            4 |
+|     15 |            1 |
+|    16+ |            3 |
 +--------+--------------+
 
 
@@ -45,24 +48,31 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | No                     |              17 |            7 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              32 |            8 |
-| Yes          | No                    | No                     |               0 |            0 |
+| No           | Yes                   | No                     |              80 |           20 |
+| Yes          | No                    | No                     |              16 |            3 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | Yes                   | No                     |               1 |            1 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------+---------------+----------------------+------------------+----------------+
-|      Clock Signal     | Enable Signal |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
-+-----------------------+---------------+----------------------+------------------+----------------+
-|  clk_IBUF_BUFG        |               |                      |                1 |              1 |
-|  vga/line_clk_reg_n_0 |               | vga/v_val[0]_i_1_n_0 |                4 |             16 |
-|  clk_IBUF_BUFG        |               | vga/clear            |                4 |             16 |
-+-----------------------+---------------+----------------------+------------------+----------------+
++-----------------------+----------------------------------+--------------------------------------+------------------+----------------+
+|      Clock Signal     |           Enable Signal          |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++-----------------------+----------------------------------+--------------------------------------+------------------+----------------+
+|  baud_BUFG            | uart/transmitter/bit_out         | uart/transmitter/bit_out0            |                1 |              1 |
+|  clk_IBUF_BUFG        |                                  |                                      |                2 |              2 |
+|  baud_BUFG            |                                  | uart/receiver/count[7]_i_1_n_0       |                2 |              8 |
+|  baud_BUFG            |                                  | uart/transmitter/count[7]_i_1__0_n_0 |                2 |              8 |
+|  baud_BUFG            | uart/receiver/E[0]               |                                      |                1 |              8 |
+|  baud_BUFG            | uart/transmitter/temp[7]_i_1_n_0 |                                      |                2 |              8 |
+|  baud_BUFG            |                                  |                                      |                5 |             15 |
+|  vga/line_clk_reg_n_0 |                                  | vga/v_val[0]_i_1_n_0                 |                4 |             16 |
+|  clk_IBUF_BUFG        |                                  | vga/clear                            |                4 |             16 |
+|  clk_IBUF_BUFG        |                                  | uart/baudrate_gen/counter[0]_i_1_n_0 |                8 |             32 |
++-----------------------+----------------------------------+--------------------------------------+------------------+----------------+
 
 

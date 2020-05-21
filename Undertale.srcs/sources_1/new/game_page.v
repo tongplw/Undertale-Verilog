@@ -21,7 +21,13 @@
 
 
 module game_page(
+    input clk,
+    input page_num,
     input [11:0] x, y, 
-    output game_rgb
+    output [2:0] rgb,
+    input up, left, down, right, space
     );
+    
+    assign rgb = 3'bzzz;
+    
 endmodule

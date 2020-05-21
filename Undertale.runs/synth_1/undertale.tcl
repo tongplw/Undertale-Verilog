@@ -36,6 +36,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/tongplw/Desktop/Undertale/Undertale.srcs/sources_1/new/controller.v
   C:/Users/tongplw/Desktop/Undertale/Undertale.srcs/sources_1/new/game_page.v
   C:/Users/tongplw/Desktop/Undertale/Undertale.srcs/sources_1/new/intro_page.v
+  C:/Users/tongplw/Desktop/Undertale/Undertale.srcs/sources_1/new/uart.v
   C:/Users/tongplw/Desktop/Undertale/Undertale.srcs/sources_1/new/vga.v
   C:/Users/tongplw/Desktop/Undertale/Undertale.srcs/sources_1/new/undertale.v
 }

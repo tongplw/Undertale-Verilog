@@ -25,7 +25,7 @@ module vga(
     output Hsync, Vsync,
     output [11:0] rgb,
     output [11:0] x, y,
-    input [2:0] selected_rgb
+    input [2:0] encoded_rgb
     );
     
     parameter WIDTH = 1920;
@@ -38,7 +38,7 @@ module vga(
     reg line_clk = 0;
     reg [15:0] h_val = 0, v_val = 0;
     
-    color_decode color_decode(selected_rgb, rgb);
+    color_decode color_decode(encoded_rgb, rgb);
     
     assign x = (h_val >= H_BACK_PORCH & h_val < WIDTH + H_BACK_PORCH) ? (h_val - H_BACK_PORCH) / 4 : 0;
     assign y = (v_val >= V_BACK_PORCH & v_val < HEIGHT + V_BACK_PORCH) ? (v_val - V_BACK_PORCH) / 4 : 0;
