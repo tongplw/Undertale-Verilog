@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu May 21 15:26:13 2020
+| Date         : Thu May 21 16:40:33 2020
 | Host         : tongplw running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file undertale_clock_utilization_routed.rpt
 | Design       : undertale
@@ -68,7 +68,7 @@ Table of Contents
 +----------+-----------------+------------+-----------------+--------------+-------------+-----------------+--------------+-------+--------------------+----------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL        | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin         | Net                  |
 +----------+-----------------+------------+-----------------+--------------+-------------+-----------------+--------------+-------+--------------------+----------------------||
-| 0        | FDRE/Q          | None       | SLICE_X1Y28/AFF | X0Y0         |          16 |               0 |              |       | vga/line_clk_reg/Q | vga/line_clk_reg_n_0 - Static -
+| 0        | FDRE/Q          | None       | SLICE_X1Y31/AFF | X0Y0         |          16 |               0 |              |       | vga/line_clk_reg/Q | vga/line_clk_reg_n_0 - Static -
 +----------+-----------------+------------+-----------------+--------------+-------------+-----------------+--------------+-------+--------------------+----------------------||
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Thu May 21 15:26:13 2020
+| Date             : Thu May 21 16:40:32 2020
 | Host             : tongplw running 64-bit major release  (build 9200)
 | Command          : report_power -file undertale_power_routed.rpt -pb undertale_power_summary_routed.pb -rpx undertale_power_routed.rpx
 | Design           : undertale
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |       59 |       --- |             --- |
+| Slice Logic    |    <0.001 |       60 |       --- |             --- |
 |   CARRY4       |    <0.001 |        8 |      8150 |            0.10 |
 |   LUT as Logic |    <0.001 |       13 |     20800 |            0.06 |
 |   Register     |    <0.001 |       33 |     41600 |            0.08 |
 |   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |    <0.001 |       50 |       --- |             --- |
+| Signals        |    <0.001 |       51 |       --- |             --- |
 | I/O            |    <0.001 |       16 |       106 |           15.09 |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.073 |          |           |                 |

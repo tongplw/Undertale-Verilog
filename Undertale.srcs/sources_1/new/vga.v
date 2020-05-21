@@ -23,7 +23,9 @@
 module vga(
     input clk,
     output Hsync, Vsync,
-    output [11:0] rgb
+    output [11:0] rgb,
+    output [11:0] x, y,
+    input [2:0] selected_rgb
     );
     
     parameter WIDTH = 1920;
@@ -35,12 +37,8 @@ module vga(
     
     reg line_clk = 0;
     reg [15:0] h_val = 0, v_val = 0;
-    wire [11:0] x, y;
-    wire [2:0] mini_rgb_code;
     
-    // Read Image File
-    intro_page intro_page(x, y, mini_rgb_code);
-    color_decode color_decode(mini_rgb_code, rgb);
+    color_decode color_decode(selected_rgb, rgb);
     
     assign x = (h_val >= H_BACK_PORCH & h_val < WIDTH + H_BACK_PORCH) ? (h_val - H_BACK_PORCH) / 4 : 0;
     assign y = (v_val >= V_BACK_PORCH & v_val < HEIGHT + V_BACK_PORCH) ? (v_val - V_BACK_PORCH) / 4 : 0;

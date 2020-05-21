@@ -31,7 +31,19 @@ module undertale(
 //    reg clk = 0;
 //    always #1 clk = ~clk;
     
-    vga vga(clk, Hsync, Vsync, {vgaRed, vgaGreen, vgaBlue});
+    wire page_num;
+    wire [11:0] x, y;
+    wire [2:0] intro_rgb, game_rgb, selected_rgb;
+    
+    // Read Image File
+    intro_page intro_page(x, y, intro_rgb);
+    game_page game_page(x, y, game_rgb);
+
+    assign selected_rgb = (page_num == 0) ? intro_rgb : game_rgb;
+    
+    // ---------------------------------------------------------------------------
+    controller controller(page_num);
+    vga vga(clk, Hsync, Vsync, {vgaRed, vgaGreen, vgaBlue}, x, y, selected_rgb);
 //    uart uart(clk, RsRx, RsTx);
     
 endmodule
