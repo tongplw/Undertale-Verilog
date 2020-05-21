@@ -23,9 +23,7 @@
 module vga(
     input clk,
     output Hsync, Vsync,
-    output [11:0] rgb_out,
-    output [11:0] x, y,
-    input [11:0] rgb
+    output [11:0] rgb
     );
     
     parameter WIDTH = 1920;
@@ -37,19 +35,26 @@ module vga(
     
     reg line_clk = 0;
     reg [15:0] h_val = 0, v_val = 0;
+    wire [11:0] x, y;
+    wire [2:0] mini_rgb_code;
     
-    assign rgb_out = rgb;
-    assign x = (h_val >= H_BACK_PORCH & h_val < WIDTH + H_BACK_PORCH) ? h_val - H_BACK_PORCH : 0;
-    assign y = (v_val >= V_BACK_PORCH & v_val < HEIGHT + V_BACK_PORCH) ? v_val - V_BACK_PORCH : 0;
+    // Read Image File
+    intro_page intro_page(x, y, mini_rgb_code);
+    color_decode color_decode(mini_rgb_code, rgb);
+    
+    assign x = (h_val >= H_BACK_PORCH & h_val < WIDTH + H_BACK_PORCH) ? (h_val - H_BACK_PORCH) / 4 : 0;
+    assign y = (v_val >= V_BACK_PORCH & v_val < HEIGHT + V_BACK_PORCH) ? (v_val - V_BACK_PORCH) / 4 : 0;
     assign Hsync = (h_val < WIDTH + H_BACK_PORCH) ? 1 : 0;
     assign Vsync = (v_val < HEIGHT + V_BACK_PORCH) ? 1 : 0;
 
+    // HSYNC
     always @(posedge clk)
     begin
         if (h_val >= H_TOTAL) begin h_val = 0; line_clk = 1; end
         else begin h_val = h_val + 1; line_clk = 0; end
     end
     
+    // VSYNC
     always @(posedge line_clk)
     begin
         if (v_val >= V_TOTAL) v_val = 0;

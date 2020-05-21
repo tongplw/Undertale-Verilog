@@ -30,11 +30,8 @@ module undertale(
     
 //    reg clk = 0;
 //    always #1 clk = ~clk;
-
-    wire [11:0] x, y, rgb;
     
-    vga vga(clk, Hsync, Vsync, {vgaRed, vgaGreen, vgaBlue}, x, y, rgb);
-    screen screen(clk, _wr, _x, _y, _rgb, x, y, rgb);
-    uart uart(clk, RsRx, RsTx);
+    vga vga(clk, Hsync, Vsync, {vgaRed, vgaGreen, vgaBlue});
+//    uart uart(clk, RsRx, RsTx);
     
 endmodule

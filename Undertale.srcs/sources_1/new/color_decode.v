@@ -45,7 +45,7 @@ module color_decode(
 //            3'b101 : hex = YELLOW;
             3'b110 : hex = RED;
             3'b111 : hex = WHITE;
-            default : hex = WHITE;
+//            default : hex = WHITE;
         endcase
     end
     
