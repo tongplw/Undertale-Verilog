@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1590259218">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1590260910">
   <File Type="PA-TCL" Name="undertale.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="undertale_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="undertale_reports.tcl"/>
