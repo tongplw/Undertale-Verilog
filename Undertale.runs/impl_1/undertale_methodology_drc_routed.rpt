@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat May 23 16:47:09 2020
+| Date         : Sat May 23 18:30:55 2020
 | Host         : tongplw running 64-bit major release  (build 9200)
 | Command      : report_methodology -file undertale_methodology_drc_routed.rpt -pb undertale_methodology_drc_routed.pb -rpx undertale_methodology_drc_routed.rpx
 | Design       : undertale
@@ -23,46 +23,16 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 75
-+-----------+----------+-----------------------------+------------+
-| Rule      | Severity | Description                 | Violations |
-+-----------+----------+-----------------------------+------------+
-| SYNTH-10  | Warning  | Wide multiplier             | 6          |
-| TIMING-17 | Warning  | Non-clocked sequential cell | 69         |
-+-----------+----------+-----------------------------+------------+
+             Violations found: 81
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-17 | Warning  | Non-clocked sequential cell   | 69         |
+| TIMING-18 | Warning  | Missing input or output delay | 12         |
++-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-SYNTH-10#1 Warning
-Wide multiplier  
-Detected multiplier at rgb3 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#2 Warning
-Wide multiplier  
-Detected multiplier at rgb3__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#3 Warning
-Wide multiplier  
-Detected multiplier at rgb3__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#4 Warning
-Wide multiplier  
-Detected multiplier at rgb3__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#5 Warning
-Wide multiplier  
-Detected multiplier at rgb3__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#6 Warning
-Wide multiplier  
-Detected multiplier at rgb3__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
 TIMING-17#1 Warning
 Non-clocked sequential cell  
 The clock pin uart/data_in_reg[0]/C is not reached by a timing clock
@@ -406,6 +376,66 @@ Related violations: <none>
 TIMING-17#69 Warning
 Non-clocked sequential cell  
 The clock pin vga/v_val_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An output delay is missing on vgaBlue[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on vgaBlue[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on vgaBlue[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on vgaBlue[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on vgaGreen[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on vgaGreen[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on vgaGreen[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on vgaGreen[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on vgaRed[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on vgaRed[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on vgaRed[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on vgaRed[3] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 

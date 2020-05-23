@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sat May 23 16:38:56 2020
-# Process ID: 22400
+# Start of session at: Sat May 23 18:05:24 2020
+# Process ID: 21812
 # Current directory: C:/Users/tongplw/Desktop/undertale-verilog/Undertale.runs/synth_1
 # Command line: vivado.exe -log undertale.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source undertale.tcl
 # Log file: C:/Users/tongplw/Desktop/undertale-verilog/Undertale.runs/synth_1/undertale.vds
@@ -15,122 +15,26 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 22548 
+INFO: Helper process launched with PID 22756 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 379.359 ; gain = 99.176
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 380.602 ; gain = 100.242
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'undertale' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v:23]
 INFO: [Synth 8-6157] synthesizing module 'intro_page' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:23]
 	Parameter IMG_WIDTH bound to: 320 - type: integer 
 	Parameter IMG_HEIGHT bound to: 240 - type: integer 
 INFO: [Synth 8-3876] $readmem data file 'intro.list' is read successfully [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:38]
-WARNING: [Synth 8-3848] Net mem[239][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[238][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[237][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[236][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[235][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[234][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[233][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[232][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[231][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[230][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[229][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[228][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[227][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[226][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[225][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[224][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[223][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[222][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[221][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[220][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[219][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[218][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[217][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[216][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[215][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[214][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[213][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[212][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[211][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[210][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[209][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[208][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[207][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[206][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[205][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[204][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[203][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[202][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[201][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[200][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[199][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[198][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[197][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[196][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[195][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[194][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[193][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[192][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[191][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[190][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[189][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[188][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[187][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[186][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[185][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[184][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[183][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[182][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[181][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[180][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[179][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[178][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[177][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[176][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[175][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[174][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[173][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[172][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[171][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[170][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[169][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[168][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[167][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[166][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[165][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[164][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[163][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[162][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[161][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[160][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[159][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[158][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[157][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[156][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[155][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[154][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[153][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[152][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[151][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[150][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[149][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[148][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[147][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[146][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[145][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[144][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[143][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[142][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[141][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-WARNING: [Synth 8-3848] Net mem[140][319] in module/entity intro_page does not have driver. [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
-INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-6155] done synthesizing module 'intro_page' (1#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (12) of module 'intro_page' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v:43]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (12) of module 'intro_page' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v:43]
 INFO: [Synth 8-6157] synthesizing module 'game_page' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/game_page.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'game_page' (2#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/game_page.v:23]
+INFO: [Synth 8-6157] synthesizing module 'color_decode' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'color_decode' (3#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v:23]
 INFO: [Synth 8-6157] synthesizing module 'controller' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/controller.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/controller.v:35]
-INFO: [Synth 8-6155] done synthesizing module 'controller' (3#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/controller.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (4#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/controller.v:23]
 INFO: [Synth 8-6157] synthesizing module 'vga' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/vga.v:22]
 	Parameter WIDTH bound to: 640 - type: integer 
 	Parameter HEIGHT bound to: 480 - type: integer 
@@ -140,24 +44,24 @@ INFO: [Synth 8-6157] synthesizing module 'vga' [C:/Users/tongplw/Desktop/underta
 	Parameter V_FP bound to: 10 - type: integer 
 	Parameter V_SYNC bound to: 2 - type: integer 
 	Parameter V_BP bound to: 33 - type: integer 
-	Parameter H_TOTAL bound to: 800 - type: integer 
-	Parameter V_TOTAL bound to: 525 - type: integer 
+	Parameter H_TOTAL bound to: 799 - type: integer 
+	Parameter V_TOTAL bound to: 524 - type: integer 
 	Parameter HS_START bound to: 656 - type: integer 
-	Parameter HS_END bound to: 752 - type: integer 
+	Parameter HS_END bound to: 751 - type: integer 
 	Parameter VS_START bound to: 490 - type: integer 
-	Parameter VS_END bound to: 492 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'vga' (4#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/vga.v:22]
+	Parameter VS_END bound to: 491 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga' (5#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/vga.v:22]
 INFO: [Synth 8-6157] synthesizing module 'uart' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:23]
 INFO: [Synth 8-6157] synthesizing module 'baudrate_gen' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:133]
-INFO: [Synth 8-6155] done synthesizing module 'baudrate_gen' (5#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:133]
+INFO: [Synth 8-6155] done synthesizing module 'baudrate_gen' (6#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:133]
 INFO: [Synth 8-6157] synthesizing module 'receiver' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:95]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:119]
-INFO: [Synth 8-6155] done synthesizing module 'receiver' (6#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'receiver' (7#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:95]
 INFO: [Synth 8-6157] synthesizing module 'transmitter' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:53]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:80]
-INFO: [Synth 8-6155] done synthesizing module 'transmitter' (7#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'uart' (8#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'undertale' (9#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter' (8#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'uart' (9#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'undertale' (10#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v:23]
 WARNING: [Synth 8-3331] design game_page has unconnected port clk
 WARNING: [Synth 8-3331] design game_page has unconnected port page_num
 WARNING: [Synth 8-3331] design game_page has unconnected port x[11]
@@ -190,15 +94,8 @@ WARNING: [Synth 8-3331] design game_page has unconnected port down
 WARNING: [Synth 8-3331] design game_page has unconnected port right
 WARNING: [Synth 8-3331] design game_page has unconnected port space
 WARNING: [Synth 8-3331] design intro_page has unconnected port page_num
-WARNING: [Synth 8-3331] design intro_page has unconnected port x[11]
-WARNING: [Synth 8-3331] design intro_page has unconnected port x[10]
-WARNING: [Synth 8-3331] design intro_page has unconnected port x[9]
-WARNING: [Synth 8-3331] design intro_page has unconnected port y[11]
-WARNING: [Synth 8-3331] design intro_page has unconnected port y[10]
-WARNING: [Synth 8-3331] design intro_page has unconnected port y[9]
-WARNING: [Synth 8-3331] design intro_page has unconnected port y[8]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 863.887 ; gain = 583.703
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 487.082 ; gain = 206.723
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -211,10 +108,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 863.887 ; gain = 583.703
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 487.082 ; gain = 206.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 863.887 ; gain = 583.703
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 487.082 ; gain = 206.723
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -225,30 +122,30 @@ Parsing XDC File [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/cons
 Finished Parsing XDC File [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/constrs_1/new/Basys 3 Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/constrs_1/new/Basys 3 Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/undertale_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/undertale_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1034.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 812.141 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1034.434 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 812.141 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1034.434 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1034.434 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 812.141 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 812.141 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:34 ; elapsed = 00:01:39 . Memory (MB): peak = 1034.434 ; gain = 754.250
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 812.141 ; gain = 531.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:34 ; elapsed = 00:01:39 . Memory (MB): peak = 1034.434 ; gain = 754.250
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 812.141 ; gain = 531.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:34 ; elapsed = 00:01:39 . Memory (MB): peak = 1034.434 ; gain = 754.250
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 812.141 ; gain = 531.781
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "space" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "up" won't be mapped to RAM because it is too sparse
@@ -259,36 +156,22 @@ INFO: [Synth 8-5546] ROM "receiving0" won't be mapped to RAM because it is too s
 INFO: [Synth 8-5546] ROM "data_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "sending0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "bit_out0" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'hex_reg' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v:40]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:26 ; elapsed = 00:02:33 . Memory (MB): peak = 1156.176 ; gain = 875.992
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 812.141 ; gain = 531.781
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+-----------------+------------+----------+
-|      |RTL Partition    |Replication |Instances |
-+------+-----------------+------------+----------+
-|1     |intro_page__GB0  |           1|     29602|
-|2     |intro_page__GB1  |           1|      7942|
-|3     |intro_page__GB2  |           1|     10108|
-|4     |intro_page__GB3  |           1|     13718|
-|5     |intro_page__GB4  |           1|     15884|
-|6     |intro_page__GB5  |           1|     19494|
-|7     |intro_page__GB6  |           1|     31281|
-|8     |intro_page__GB7  |           1|      8664|
-|9     |intro_page__GB8  |           1|     30324|
-|10    |intro_page__GB9  |           1|      7942|
-|11    |intro_page__GB10 |           1|     10108|
-|12    |intro_page__GB11 |           1|     27436|
-|13    |intro_page__GB12 |           1|      8664|
-|14    |intro_page__GB13 |           1|     10830|
-|15    |undertale__GC0   |           1|      1115|
-+------+-----------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 4     
+	   2 Input     32 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 2     
@@ -297,12 +180,12 @@ Detailed RTL Component Info :
 	               10 Bit    Registers := 2     
 	                8 Bit    Registers := 5     
 	                1 Bit    Registers := 18    
-+---Multipliers : 
-	                32x32  Multipliers := 2     
 +---Muxes : 
+	   5 Input     12 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 2     
 	  10 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 6     
 	   2 Input      1 Bit        Muxes := 9     
 	  10 Input      1 Bit        Muxes := 2     
@@ -315,12 +198,13 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module undertale 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 3     
-+---Multipliers : 
-	                32x32  Multipliers := 2     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module color_decode 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input     12 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 Module controller 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -382,10 +266,13 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP rgb0, operation Mode is: C+A*(B:0x140).
+DSP Report: operator rgb0 is absorbed into DSP rgb0.
+DSP Report: operator rgb1 is absorbed into DSP rgb0.
 INFO: [Synth 8-5546] ROM "controller/up" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "controller/left" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "controller/down" won't be mapped to RAM because it is too sparse
@@ -395,56 +282,37 @@ INFO: [Synth 8-5546] ROM "uart/receiver/receiving0" won't be mapped to RAM becau
 INFO: [Synth 8-5546] ROM "uart/receiver/data_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "uart/transmitter/sending0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "uart/transmitter/bit_out0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v:50]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v:50]
-DSP Report: Generating DSP rgb3, operation Mode is: A*B.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: Generating DSP rgb3, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: Generating DSP rgb3, operation Mode is: A*B.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: Generating DSP rgb3, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: Generating DSP rgb3, operation Mode is: A*B.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: Generating DSP rgb3, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: Generating DSP rgb3, operation Mode is: A*B.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: Generating DSP rgb3, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-DSP Report: operator rgb3 is absorbed into DSP rgb3.
-WARNING: [Synth 8-3917] design undertale has port vgaRed[3] driven by constant 0
-WARNING: [Synth 8-3917] design undertale has port vgaRed[2] driven by constant 0
-WARNING: [Synth 8-3917] design undertale has port vgaRed[1] driven by constant 0
-WARNING: [Synth 8-3917] design undertale has port vgaRed[0] driven by constant 0
+WARNING: [Synth 8-3331] design intro_page has unconnected port page_num
+INFO: [Synth 8-3886] merging instance 'color_decode/hex_reg[0]' (LD) to 'color_decode/hex_reg[2]'
+INFO: [Synth 8-3886] merging instance 'color_decode/hex_reg[1]' (LD) to 'color_decode/hex_reg[10]'
+INFO: [Synth 8-3886] merging instance 'color_decode/hex_reg[2]' (LD) to 'color_decode/hex_reg[5]'
+INFO: [Synth 8-3886] merging instance 'color_decode/hex_reg[3]' (LD) to 'color_decode/hex_reg[7]'
+INFO: [Synth 8-3886] merging instance 'color_decode/hex_reg[4]' (LD) to 'color_decode/hex_reg[10]'
+INFO: [Synth 8-3886] merging instance 'color_decode/hex_reg[5]' (LD) to 'color_decode/hex_reg[6]'
+INFO: [Synth 8-3886] merging instance 'color_decode/hex_reg[6]' (LD) to 'color_decode/hex_reg[8]'
+INFO: [Synth 8-3886] merging instance 'color_decode/hex_reg[9]' (LD) to 'color_decode/hex_reg[10]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:57 ; elapsed = 00:05:32 . Memory (MB): peak = 1156.176 ; gain = 875.992
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:22:50 ; elapsed = 00:23:08 . Memory (MB): peak = 1043.602 ; gain = 763.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|intro_page  | p_0_out    | 131072x3      | LUT            | 
+|intro_page  | p_0_out    | 131072x3      | LUT            | 
++------------+------------+---------------+----------------+
+
+
 DSP: Preliminary Mapping  Report (see note below)
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|undertale   | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|undertale   | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|undertale   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|undertale   | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|undertale   | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|undertale   | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|undertale   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|undertale   | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|intro_page  | C+A*(B:0x140) | 12     | 9      | 12     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -452,50 +320,33 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+-----------------+------------+----------+
-|      |RTL Partition    |Replication |Instances |
-+------+-----------------+------------+----------+
-|1     |intro_page__GB0  |           1|     29402|
-|2     |intro_page__GB1  |           1|      7892|
-|3     |intro_page__GB2  |           1|     10043|
-|4     |intro_page__GB3  |           1|     13628|
-|5     |intro_page__GB4  |           1|     15779|
-|6     |intro_page__GB5  |           1|     19364|
-|7     |intro_page__GB6  |           1|     31076|
-|8     |intro_page__GB7  |           1|      8609|
-|9     |intro_page__GB8  |           1|     30119|
-|10    |intro_page__GB9  |           1|      7892|
-|11    |intro_page__GB10 |           1|     10043|
-|12    |intro_page__GB11 |           1|     27251|
-|13    |intro_page__GB12 |           1|      8609|
-|14    |intro_page__GB13 |           1|     10760|
-|15    |undertale__GC0   |           1|       593|
-+------+-----------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:33 ; elapsed = 00:06:10 . Memory (MB): peak = 1198.781 ; gain = 918.598
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:23:09 ; elapsed = 00:23:28 . Memory (MB): peak = 1043.602 ; gain = 763.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:05:34 ; elapsed = 00:06:12 . Memory (MB): peak = 1208.207 ; gain = 928.023
+Finished Timing Optimization : Time (s): cpu = 00:23:09 ; elapsed = 00:23:28 . Memory (MB): peak = 1043.602 ; gain = 763.242
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+---------------+------------+----------+
-|      |RTL Partition  |Replication |Instances |
-+------+---------------+------------+----------+
-|1     |undertale__GC0 |           1|       578|
-+------+---------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:05:35 ; elapsed = 00:06:12 . Memory (MB): peak = 1217.230 ; gain = 937.047
+Finished Technology Mapping : Time (s): cpu = 00:23:10 ; elapsed = 00:23:29 . Memory (MB): peak = 1043.602 ; gain = 763.242
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -515,13 +366,11 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6064] Net n_0_79 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
-INFO: [Synth 8-6064] Net rgb4[16] is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:36 ; elapsed = 00:06:13 . Memory (MB): peak = 1217.230 ; gain = 937.047
+Finished IO Insertion : Time (s): cpu = 00:23:11 ; elapsed = 00:23:30 . Memory (MB): peak = 1043.602 ; gain = 763.242
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -534,7 +383,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:36 ; elapsed = 00:06:13 . Memory (MB): peak = 1217.230 ; gain = 937.047
+Finished Renaming Generated Instances : Time (s): cpu = 00:23:11 ; elapsed = 00:23:30 . Memory (MB): peak = 1043.602 ; gain = 763.242
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -546,25 +395,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:36 ; elapsed = 00:06:13 . Memory (MB): peak = 1217.230 ; gain = 937.047
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:23:11 ; elapsed = 00:23:30 . Memory (MB): peak = 1043.602 ; gain = 763.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:05:36 ; elapsed = 00:06:13 . Memory (MB): peak = 1217.230 ; gain = 937.047
+Finished Renaming Generated Ports : Time (s): cpu = 00:23:11 ; elapsed = 00:23:30 . Memory (MB): peak = 1043.602 ; gain = 763.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:05:36 ; elapsed = 00:06:13 . Memory (MB): peak = 1217.230 ; gain = 937.047
+Finished Handling Custom Attributes : Time (s): cpu = 00:23:14 ; elapsed = 00:23:33 . Memory (MB): peak = 1043.602 ; gain = 763.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:05:36 ; elapsed = 00:06:13 . Memory (MB): peak = 1217.230 ; gain = 937.047
+Finished Renaming Generated Nets : Time (s): cpu = 00:23:14 ; elapsed = 00:23:34 . Memory (MB): peak = 1043.602 ; gain = 763.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -581,53 +430,60 @@ Report Cell Usage:
 |      |Cell    |Count |
 +------+--------+------+
 |1     |BUFG    |     2|
-|2     |CARRY4  |    33|
-|3     |DSP48E1 |     6|
+|2     |CARRY4  |    17|
+|3     |DSP48E1 |     1|
 |4     |LUT1    |     8|
-|5     |LUT2    |    77|
-|6     |LUT3    |    14|
-|7     |LUT4    |    25|
-|8     |LUT5    |    18|
-|9     |LUT6    |    58|
-|10    |MUXF7   |     1|
-|11    |FDRE    |   106|
-|12    |IBUF    |     2|
-|13    |OBUF    |    15|
+|5     |LUT2    |    10|
+|6     |LUT3    |    43|
+|7     |LUT4    |    55|
+|8     |LUT5    |   150|
+|9     |LUT6    |  2174|
+|10    |MUXF7   |   235|
+|11    |MUXF8   |    86|
+|12    |FDRE    |   107|
+|13    |LD      |     4|
+|14    |IBUF    |     2|
+|15    |OBUF    |    15|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+-----------------+-------------+------+
 |      |Instance         |Module       |Cells |
 +------+-----------------+-------------+------+
-|1     |top              |             |   365|
-|2     |  uart           |uart         |   157|
-|3     |    baudrate_gen |baudrate_gen |    58|
-|4     |    receiver     |receiver     |    50|
-|5     |    transmitter  |transmitter  |    39|
-|6     |  vga            |vga          |   100|
+|1     |top              |             |  2909|
+|2     |  color_decode   |color_decode |     7|
+|3     |  controller     |controller   |     2|
+|4     |  intro_page     |intro_page   |  2651|
+|5     |  uart           |uart         |   154|
+|6     |    baudrate_gen |baudrate_gen |    58|
+|7     |    receiver     |receiver     |    44|
+|8     |    transmitter  |transmitter  |    40|
+|9     |  vga            |vga          |    76|
 +------+-----------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:05:36 ; elapsed = 00:06:13 . Memory (MB): peak = 1217.230 ; gain = 937.047
+Finished Writing Synthesis Report : Time (s): cpu = 00:23:14 ; elapsed = 00:23:34 . Memory (MB): peak = 1043.602 ; gain = 763.242
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:07 ; elapsed = 00:06:04 . Memory (MB): peak = 1217.230 ; gain = 766.500
-Synthesis Optimization Complete : Time (s): cpu = 00:05:36 ; elapsed = 00:06:15 . Memory (MB): peak = 1217.230 ; gain = 937.047
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:22:56 ; elapsed = 00:23:22 . Memory (MB): peak = 1043.602 ; gain = 438.184
+Synthesis Optimization Complete : Time (s): cpu = 00:23:15 ; elapsed = 00:23:34 . Memory (MB): peak = 1043.602 ; gain = 763.242
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 343 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'undertale' is not ideal for floorplanning, since the cellview 'intro_page' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1217.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1043.602 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 4 instances were transformed.
+  LD => LDCE: 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-58 Infos, 143 Warnings, 0 Critical Warnings and 0 Errors encountered.
+63 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:05:39 ; elapsed = 00:06:18 . Memory (MB): peak = 1217.230 ; gain = 949.309
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1217.230 ; gain = 0.000
+synth_design: Time (s): cpu = 00:23:18 ; elapsed = 00:23:38 . Memory (MB): peak = 1043.602 ; gain = 775.176
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1043.602 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/tongplw/Desktop/undertale-verilog/Undertale.runs/synth_1/undertale.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file undertale_utilization_synth.rpt -pb undertale_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat May 23 16:45:20 2020...
+INFO: [Common 17-206] Exiting Vivado at Sat May 23 18:29:06 2020...
