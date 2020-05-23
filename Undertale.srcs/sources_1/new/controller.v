@@ -23,22 +23,23 @@
 module controller(
     input clk,
     input [7:0] command,
-    input ena,
+    input ena, de,
     output reg page_num,
     output reg up, left, down, right, space
     );
     
+    reg change_page = 0;
     initial page_num = 0;
     
     always @(posedge clk) begin
         if (ena == 1)
             case(command)
-                8'h10 : if (page_num == 0) page_num = 1;    // ENTER_KEY
-                8'h20 : space = 1;                          // SPACE_KEY
-                8'h77 : up = 1;                             // W_KEY
-                8'h61 : left = 1;                           // A_KEY
-                8'h73 : down = 1;                           // S_KEY
-                8'h64 : right = 1;                          // D_KEY          
+                8'h10 : change_page = 1;        // ENTER_KEY
+                8'h20 : space = 1;              // SPACE_KEY
+                8'h77 : up = 1;                 // W_KEY
+                8'h61 : left = 1;               // A_KEY
+                8'h73 : down = 1;               // S_KEY
+                8'h64 : right = 1;              // D_KEY          
             endcase
         else begin
             up = 0;
@@ -46,6 +47,12 @@ module controller(
             down = 0;
             right = 0;
             space = 0;
+            if (~de && change_page) begin
+                change_page = 0;
+                page_num = ~page_num;
+            end
         end 
+
     end
+    
 endmodule

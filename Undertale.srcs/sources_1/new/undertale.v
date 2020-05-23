@@ -47,7 +47,7 @@ module undertale(
     assign {vgaRed, vgaGreen, vgaBlue} = (de) ? rgb : 12'h000;
 
     // ---------------------------------------------------------------------------
-    controller controller(clk, command, ena, page_num, up, down, left, right, space);
+    controller controller(clk, command, ena, de, page_num, up, down, left, right, space);
     vga vga(clk, Hsync, Vsync, x, y, de);
     uart uart(clk, RsRx, RsTx, command, ena);
     
