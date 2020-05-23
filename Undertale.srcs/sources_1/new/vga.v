@@ -19,7 +19,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module vga(
     input clk,
     output Hsync, Vsync,
@@ -51,22 +50,22 @@ module vga(
     reg line_clk = 0;
     reg [9:0] h_val = 0, v_val = 0;
     
-    assign x = (h_val < WIDTH) ? h_val / 4 : 0;
-    assign y = (v_val < HEIGHT) ? v_val / 4 : 0;
-    assign Hsync = (h_val <= HS_START) || (h_val >= HS_END);
-    assign Vsync = (v_val <= VS_START) || (v_val >= VS_END);
+    assign x = (h_val < WIDTH) ? h_val / 2 : 0;
+    assign y = (v_val < HEIGHT) ? v_val / 2 : 0;
+    assign Hsync = (h_val >= HS_START) && (h_val <= HS_END);
+    assign Vsync = (v_val >= VS_START) && (v_val <= VS_END);
 
     // HSYNC
     always @(posedge pix_stb)
     begin
-        if (h_val >= H_TOTAL) begin h_val = 0; line_clk = 1; end
+        if (h_val >= H_TOTAL - 1) begin h_val = 0; line_clk = 1; end
         else begin h_val = h_val + 1; line_clk = 0; end
     end
     
     // VSYNC
     always @(posedge line_clk)
     begin
-        if (v_val >= V_TOTAL) v_val = 0;
+        if (v_val >= V_TOTAL - 1) v_val = 0;
         else v_val = v_val + 1;
     end
     

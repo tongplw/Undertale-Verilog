@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat May 23 02:19:33 2020
+| Date         : Sat May 23 16:47:09 2020
 | Host         : tongplw running 64-bit major release  (build 9200)
 | Command      : report_methodology -file undertale_methodology_drc_routed.rpt -pb undertale_methodology_drc_routed.pb -rpx undertale_methodology_drc_routed.rpx
 | Design       : undertale
@@ -23,15 +23,46 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 69
+             Violations found: 75
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
+| SYNTH-10  | Warning  | Wide multiplier             | 6          |
 | TIMING-17 | Warning  | Non-clocked sequential cell | 69         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+SYNTH-10#1 Warning
+Wide multiplier  
+Detected multiplier at rgb3 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#2 Warning
+Wide multiplier  
+Detected multiplier at rgb3__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#3 Warning
+Wide multiplier  
+Detected multiplier at rgb3__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#4 Warning
+Wide multiplier  
+Detected multiplier at rgb3__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#5 Warning
+Wide multiplier  
+Detected multiplier at rgb3__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#6 Warning
+Wide multiplier  
+Detected multiplier at rgb3__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
 TIMING-17#1 Warning
 Non-clocked sequential cell  
 The clock pin uart/data_in_reg[0]/C is not reached by a timing clock

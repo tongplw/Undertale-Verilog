@@ -27,8 +27,8 @@ module intro_page(
     );
     
     integer i, j;
-    parameter IMG_WIDTH = 480;
-    parameter IMG_HEIGHT = 270;
+    parameter IMG_WIDTH = 320;
+    parameter IMG_HEIGHT = 240;
     
     reg [2:0] mem [IMG_HEIGHT - 1:0][IMG_WIDTH - 1:0];
     reg [2:0] rom [IMG_HEIGHT * IMG_WIDTH - 1:0];
@@ -41,6 +41,6 @@ module intro_page(
                 mem[i][j] = rom[IMG_WIDTH * i + j];
     end
     
-    assign rgb = mem[x][y];
+    assign rgb = mem[y][x];
     
 endmodule

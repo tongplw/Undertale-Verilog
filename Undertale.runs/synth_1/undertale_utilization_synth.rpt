@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat May 23 02:17:57 2020
+| Date         : Sat May 23 16:45:20 2020
 | Host         : tongplw running 64-bit major release  (build 9200)
 | Command      : report_utilization -file undertale_utilization_synth.rpt -pb undertale_utilization_synth.pb
 | Design       : undertale
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   74 |     0 |     20800 |  0.36 |
-|   LUT as Logic          |   74 |     0 |     20800 |  0.36 |
+| Slice LUTs*             |  179 |     0 |     20800 |  0.86 |
+|   LUT as Logic          |  179 |     0 |     20800 |  0.86 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
 | Slice Registers         |  106 |     0 |     41600 |  0.25 |
 |   Register as Flip Flop |  106 |     0 |     41600 |  0.25 |
@@ -77,11 +77,12 @@ Table of Contents
 3. DSP
 ------
 
-+-----------+------+-------+-----------+-------+
-| Site Type | Used | Fixed | Available | Util% |
-+-----------+------+-------+-----------+-------+
-| DSPs      |    0 |     0 |        90 |  0.00 |
-+-----------+------+-------+-----------+-------+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |    6 |     0 |        90 |  6.67 |
+|   DSP48E1 only |    6 |       |           |       |
++----------------+------+-------+-----------+-------+
 
 
 4. IO and GT Specific
@@ -150,14 +151,15 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |  106 |        Flop & Latch |
-| LUT6     |   35 |                 LUT |
-| CARRY4   |   17 |          CarryLogic |
-| LUT2     |   16 |                 LUT |
+| LUT2     |   77 |                 LUT |
+| LUT6     |   58 |                 LUT |
+| CARRY4   |   33 |          CarryLogic |
+| LUT4     |   25 |                 LUT |
+| LUT5     |   18 |                 LUT |
 | OBUF     |   15 |                  IO |
-| LUT5     |   14 |                 LUT |
-| LUT4     |   11 |                 LUT |
-| LUT3     |   11 |                 LUT |
+| LUT3     |   14 |                 LUT |
 | LUT1     |    8 |                 LUT |
+| DSP48E1  |    6 |    Block Arithmetic |
 | IBUF     |    2 |                  IO |
 | BUFG     |    2 |               Clock |
 | MUXF7    |    1 |               MuxFx |

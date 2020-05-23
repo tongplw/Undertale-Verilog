@@ -36,7 +36,7 @@ module undertale(
     wire [7:0] command;
     wire [11:0] x, y;
     wire [2:0] intro_rgb, game_rgb, selected_rgb;
-    wire [11:0] rgb;
+    reg [11:0] rgb;
     
     // Read Image File
     intro_page intro_page(page_num, x, y, intro_rgb);
@@ -44,9 +44,13 @@ module undertale(
 //    color_decode color_decode(selected_rgb, rgb);
     
     assign selected_rgb = (page_num == 0) ? intro_rgb : game_rgb;
-    assign {vgaRed, vgaGreen, vgaBlue} = rgb;
-    assign rgb = (de) ? 12'h0f0 : 12'h000;
-    
+    assign {vgaRed, vgaGreen, vgaBlue} = (de) ? rgb : 12'h000;
+
+    always @(x or y)
+        if (100 < ((x-100) ** 2) + ((y-100)**2))
+            rgb <= 0;
+        else
+            rgb <= 12'h0FF;    
     // ---------------------------------------------------------------------------
     controller controller(clk, command, ena, page_num, up, down, left, right, space);
     vga vga(clk, Hsync, Vsync, x, y, de);

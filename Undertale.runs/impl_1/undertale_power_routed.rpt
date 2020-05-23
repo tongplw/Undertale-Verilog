@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Sat May 23 02:19:33 2020
+| Date             : Sat May 23 16:47:10 2020
 | Host             : tongplw running 64-bit major release  (build 9200)
 | Command          : report_power -file undertale_power_routed.rpt -pb undertale_power_summary_routed.pb -rpx undertale_power_routed.rpx
 | Design           : undertale
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.074        |
+| Total On-Chip Power (W)  | 0.080        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.002        |
+| Dynamic (W)              | 0.008        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -53,17 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      231 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       74 |     20800 |            0.36 |
-|   CARRY4       |    <0.001 |       17 |      8150 |            0.21 |
+| Slice Logic    |     0.001 |      355 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      179 |     20800 |            0.86 |
+|   CARRY4       |    <0.001 |       33 |      8150 |            0.40 |
 |   Register     |    <0.001 |      106 |     41600 |            0.25 |
 |   F7/F8 Muxes  |    <0.001 |        1 |     32600 |           <0.01 |
-|   Others       |     0.000 |       11 |       --- |             --- |
+|   Others       |     0.000 |       14 |       --- |             --- |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-| Signals        |    <0.001 |      203 |       --- |             --- |
+| Signals        |     0.001 |      515 |       --- |             --- |
+| DSPs           |     0.005 |        6 |        90 |            6.67 |
 | I/O            |    <0.001 |       17 |       106 |           16.04 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.074 |          |           |                 |
+| Total          |     0.080 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.011 |       0.001 |      0.010 |
+| Vccint    |       1.000 |     0.018 |       0.008 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -142,7 +143,7 @@ Table of Contents
 +-----------+-----------+
 | Name      | Power (W) |
 +-----------+-----------+
-| undertale |     0.002 |
+| undertale |     0.008 |
 +-----------+-----------+
 
 
