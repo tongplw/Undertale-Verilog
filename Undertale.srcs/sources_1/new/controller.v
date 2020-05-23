@@ -39,8 +39,8 @@ module controller(
                 8'h0D : change_page = 1;        // ENTER_KEY
                 8'h20 : space = 1;              // SPACE_KEY
                 8'h77 : up = 1;                 // W_KEY
-                8'h73 : left = 1;               // A_KEY
-                8'h61 : down = 1;               // S_KEY
+                8'h61 : left = 1;               // A_KEY
+                8'h73 : down = 1;               // S_KEY
                 8'h64 : right = 1;              // D_KEY          
             endcase
         end
