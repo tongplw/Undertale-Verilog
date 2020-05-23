@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat May 23 18:29:06 2020
+| Date         : Sat May 23 22:18:00 2020
 | Host         : tongplw running 64-bit major release  (build 9200)
 | Command      : report_utilization -file undertale_utilization_synth.rpt -pb undertale_utilization_synth.pb
 | Design       : undertale
@@ -30,14 +30,14 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 2344 |     0 |     20800 | 11.27 |
-|   LUT as Logic          | 2344 |     0 |     20800 | 11.27 |
+| Slice LUTs*             | 7542 |     0 |     20800 | 36.26 |
+|   LUT as Logic          | 7542 |     0 |     20800 | 36.26 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  111 |     0 |     41600 |  0.27 |
-|   Register as Flip Flop |  107 |     0 |     41600 |  0.26 |
+| Slice Registers         |  139 |     0 |     41600 |  0.33 |
+|   Register as Flip Flop |  135 |     0 |     41600 |  0.32 |
 |   Register as Latch     |    4 |     0 |     41600 | <0.01 |
-| F7 Muxes                |  235 |     0 |     16300 |  1.44 |
-| F8 Muxes                |   86 |     0 |      8150 |  1.06 |
+| F7 Muxes                | 2510 |     0 |     16300 | 15.40 |
+| F8 Muxes                |  699 |     0 |      8150 |  8.58 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 4     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 107   |          Yes |       Reset |            - |
+| 135   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -80,8 +80,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |    1 |     0 |        90 |  1.11 |
-|   DSP48E1 only |    1 |       |           |       |
+| DSPs           |    7 |     0 |        90 |  7.78 |
+|   DSP48E1 only |    7 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -150,21 +150,21 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     | 2174 |                 LUT |
-| MUXF7    |  235 |               MuxFx |
-| LUT5     |  150 |                 LUT |
-| FDRE     |  107 |        Flop & Latch |
-| MUXF8    |   86 |               MuxFx |
-| LUT4     |   55 |                 LUT |
-| LUT3     |   43 |                 LUT |
-| CARRY4   |   17 |          CarryLogic |
+| LUT6     | 6334 |                 LUT |
+| MUXF7    | 2510 |               MuxFx |
+| LUT5     | 1140 |                 LUT |
+| MUXF8    |  699 |               MuxFx |
+| LUT4     |  156 |                 LUT |
+| FDRE     |  135 |        Flop & Latch |
+| LUT2     |  109 |                 LUT |
+| CARRY4   |   47 |          CarryLogic |
+| LUT3     |   25 |                 LUT |
 | OBUF     |   15 |                  IO |
-| LUT2     |   10 |                 LUT |
-| LUT1     |    8 |                 LUT |
+| LUT1     |   14 |                 LUT |
+| DSP48E1  |    7 |    Block Arithmetic |
 | LDCE     |    4 |        Flop & Latch |
 | IBUF     |    2 |                  IO |
 | BUFG     |    2 |               Clock |
-| DSP48E1  |    1 |    Block Arithmetic |
 +----------+------+---------------------+
 
 

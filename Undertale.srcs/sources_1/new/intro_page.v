@@ -27,20 +27,10 @@ module intro_page(
     );
     
     integer i, j;
-    parameter IMG_WIDTH = 320;
-    parameter IMG_HEIGHT = 240;
-    
-//    reg [2:0] mem [IMG_HEIGHT - 1:0][IMG_WIDTH - 1:0];
+    parameter IMG_WIDTH = 640;
+    parameter IMG_HEIGHT = 480;
+  
     reg [2:0] rom [IMG_HEIGHT * IMG_WIDTH - 1:0];
-
-    initial 
-//    begin
-        $readmemb("intro.list", rom);
-//        for(i = 0; i < IMG_HEIGHT; i = i + 1)
-//            for(j = 0; j < IMG_WIDTH; j = j + 1)
-//                mem[i][j] = rom[IMG_WIDTH * i + j];
-//    end
-    
-//    assign rgb = mem[y][x];
+    initial $readmemb("intro.list", rom);
     assign rgb = rom[IMG_WIDTH * y + x];
 endmodule

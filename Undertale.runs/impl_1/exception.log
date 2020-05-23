@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\Users\tongplw\Desktop\undertale-verilog\Undertale.runs\impl_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permission denied
