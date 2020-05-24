@@ -32,10 +32,13 @@ set_property ip_output_repo d:/workspace/undertale-verilog/Undertale.cache/ip [c
 set_property ip_cache_permissions {read write} [current_project]
 read_mem D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/intro.list
 read_verilog -library xil_defaultlib {
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/boxComponent.v
   D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v
   D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/controller.v
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/enemyHealthBarComponent.v
   D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/game_page.v
   D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/playerHealthBarComponent.v
   D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/uart.v
   D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/vga.v
   D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v

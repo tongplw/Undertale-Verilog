@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Sun May 24 03:43:52 2020
+| Date             : Sun May 24 14:41:01 2020
 | Host             : DESKTOP-9OGL4CH running 64-bit major release  (build 9200)
 | Command          : report_power -file undertale_power_routed.rpt -pb undertale_power_summary_routed.pb -rpx undertale_power_routed.rpx
 | Design           : undertale
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.023 |     4541 |       --- |             --- |
-|   LUT as Logic |     0.022 |     3455 |     20800 |           16.61 |
-|   F7/F8 Muxes  |    <0.001 |      792 |     32600 |            2.43 |
+| Slice Logic    |     0.024 |     4565 |       --- |             --- |
+|   LUT as Logic |     0.023 |     3465 |     20800 |           16.66 |
+|   F7/F8 Muxes  |    <0.001 |      791 |     32600 |            2.43 |
 |   CARRY4       |    <0.001 |       75 |      8150 |            0.92 |
-|   Register     |    <0.001 |      141 |     41600 |            0.34 |
+|   Register     |    <0.001 |      146 |     41600 |            0.35 |
+|   Others       |     0.000 |       26 |       --- |             --- |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       21 |       --- |             --- |
-| Signals        |     0.021 |     3116 |       --- |             --- |
+| Signals        |     0.021 |     3153 |       --- |             --- |
 | DSPs           |     0.006 |        7 |        90 |            7.78 |
 | I/O            |    <0.001 |       17 |       106 |           16.04 |
 | Static Power   |     0.072 |          |           |                 |
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.061 |       0.052 |      0.010 |
+| Vccint    |       1.000 |     0.062 |       0.052 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |

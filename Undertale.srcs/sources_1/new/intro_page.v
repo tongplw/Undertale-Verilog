@@ -23,7 +23,8 @@
 module intro_page(
     input page_num,
     input [11:0] x, y,
-    output [2:0] rgb
+    output [2:0] rgb,
+    output intro_on
     );
     
     integer i, j;
@@ -33,4 +34,6 @@ module intro_page(
     reg [2:0] rom [IMG_HEIGHT * IMG_WIDTH - 1:0];
     initial $readmemb("intro.list", rom);
     assign rgb = rom[IMG_WIDTH * y + x];
+    assign intro_on = (page_num) ? 0:1;
+    
 endmodule

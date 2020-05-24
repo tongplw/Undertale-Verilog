@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun May 24 03:43:51 2020
+| Date         : Sun May 24 14:41:00 2020
 | Host         : DESKTOP-9OGL4CH running 64-bit major release  (build 9200)
 | Command      : report_methodology -file undertale_methodology_drc_routed.rpt -pb undertale_methodology_drc_routed.pb -rpx undertale_methodology_drc_routed.rpx
 | Design       : undertale
@@ -23,13 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 79
+             Violations found: 84
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
 | SYNTH-10  | Warning  | Wide multiplier             | 6          |
+| TIMING-16 | Warning  | Large setup violation       | 3          |
 | TIMING-17 | Warning  | Non-clocked sequential cell | 69         |
-| TIMING-20 | Warning  | Non-clocked latch           | 4          |
+| TIMING-20 | Warning  | Non-clocked latch           | 6          |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -62,6 +63,21 @@ Related violations: <none>
 SYNTH-10#6 Warning
 Wide multiplier  
 Detected multiplier at game_page/rgb3__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -4.368 ns between game_page/pos_y_reg[0]/C (clocked by sys_clk_pin) and rgb_buffer_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -4.553 ns between game_page/pos_y_reg[0]/C (clocked by sys_clk_pin) and rgb_buffer_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -4.557 ns between game_page/pos_y_reg[0]/C (clocked by sys_clk_pin) and rgb_buffer_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-17#1 Warning
@@ -427,6 +443,16 @@ Related violations: <none>
 TIMING-20#4 Warning
 Non-clocked latch  
 The latch color_decode/hex_reg[8] cannot be properly analyzed as its control pin color_decode/hex_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch ehp/rgbCode_reg[0] cannot be properly analyzed as its control pin ehp/rgbCode_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch hp/rgbCode_reg[0] cannot be properly analyzed as its control pin hp/rgbCode_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 

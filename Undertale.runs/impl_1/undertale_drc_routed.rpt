@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun May 24 03:43:49 2020
+| Date         : Sun May 24 14:40:58 2020
 | Host         : DESKTOP-9OGL4CH running 64-bit major release  (build 9200)
 | Command      : report_drc -file undertale_drc_routed.rpt -pb undertale_drc_routed.pb -rpx undertale_drc_routed.rpx
 | Design       : undertale
@@ -24,14 +24,14 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 29
+             Violations found: 30
 +----------+----------+------------------------+------------+
 | Rule     | Severity | Description            | Violations |
 +----------+----------+------------------------+------------+
 | DPIP-1   | Warning  | Input pipelining       | 14         |
 | DPOP-1   | Warning  | PREG Output pipelining | 7          |
 | DPOP-2   | Warning  | MREG Output pipelining | 7          |
-| PDRC-153 | Warning  | Gated clock check      | 1          |
+| PDRC-153 | Warning  | Gated clock check      | 2          |
 +----------+----------+------------------------+------------+
 
 2. REPORT DETAILS
@@ -178,7 +178,12 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net intro_page/E[0] is a gated clock net sourced by a combinational pin intro_page/hex_reg[11]_i_2/O, cell intro_page/hex_reg[11]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net color_decode/hex_reg[11]_i_2_n_0 is a gated clock net sourced by a combinational pin color_decode/hex_reg[11]_i_2/O, cell color_decode/hex_reg[11]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net vga/v_val_reg[3]_0 is a gated clock net sourced by a combinational pin vga/rgbCode_reg[0]_i_1__0/O, cell vga/rgbCode_reg[0]_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

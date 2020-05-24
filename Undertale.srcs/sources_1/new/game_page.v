@@ -24,11 +24,13 @@ module game_page(
     input page_num,
     input [11:0] x, y, 
     output reg [2:0] rgb,
-    input up, left, down, right, space
+    input up, left, down, right, space,
+    output game_on
     );
     
     reg [11:0] pos_x = 320;
     reg [11:0] pos_y = 240;
+    
 
 //    function reg is_in_a_heart(input [11:0] pos_x, pos_y, x, y);
 //        integer r = 10;
@@ -40,10 +42,13 @@ module game_page(
     integer size_in = 18;
     
     integer thickness = 3;
-    integer left_boundary = 160;
-    integer right_boundary = 480;
+    integer left_boundary = 200;
+    integer right_boundary = 440;
     integer top_boundary = 120;
     integer bottom_boundary = 360;
+    
+    // On signal
+    assign game_on = (rgb == 3'b110) ? 1:0;
     
     always @(x or y) begin
         // display a red dot
@@ -53,14 +58,8 @@ module game_page(
 //        else if (pos_x > 320 - size_out && pos_x < 320 + size_out && pos_y > 240 - size_out && pos_y < 240 + size_out &&
 //                pos_x < 320 - size_in && pos_x > 320 + size_in && pos_y < 240 + size_in && pos_y > 240 + size_in)
 //            rgb <= 3'b111;
-            
-        else if ((x>=left_boundary-thickness && x<left_boundary && y>=top_boundary-thickness && y<bottom_boundary+thickness) || 
-                 (x>=right_boundary && x<right_boundary+thickness && y>=top_boundary-thickness && y<bottom_boundary+thickness) ||
-                 (y>=top_boundary-thickness && y<top_boundary && x>=left_boundary-thickness && x<right_boundary+thickness) || 
-                 (y>=bottom_boundary && y<bottom_boundary+thickness && x>=left_boundary-thickness && x<right_boundary+thickness)) 
-        begin
-            rgb <= 3'b111;         
-        end
+        
+       
         // display nothing
         else
             rgb <= 3'b000;
