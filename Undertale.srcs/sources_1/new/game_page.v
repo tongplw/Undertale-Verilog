@@ -27,36 +27,47 @@ module game_page(
     input up, left, down, right, space
     );
     
-//    function reg is_in_a_heart(input [11:0] pos_x, pos_y, x, y);
-//        integer r = 10;
-//        is_in_a_heart = ((((x - pos_x)/r)**2 + ((y - pos_y)/r)**2 - 1)**3 - ((x - pos_x)/r)**2 * ((y - pos_y)/r)**3 < 0);
-//    endfunction
-
-    integer r = 7;
-    integer size_out = 20;
-    integer size_in = 18;
+    parameter size_out = 60;
+    parameter size_in = 57;
+    parameter soul_width = 13;
+    parameter soul_height = 12;
+    parameter speed = 2;
     
-    reg [11:0] pos_x = 320;
-    reg [11:0] pos_y = 240;
+    reg [11:0] pos_x = 320 - soul_width / 2;
+    reg [11:0] pos_y = 240 - soul_height / 2;
+    reg [5:0] player_hp = 20;
+    reg [5:0] monster_hp = 20;
+    
+    wire soul_on;
+    wire [2:0] soul_rgb;
+    
+    // read red_heart image
+    image #("soul.list", soul_width, soul_height)(x - pos_x, y - pos_y, soul_rgb, soul_on);
 
     always @(x or y) begin
-        // display a red dot
-        if (r ** 2 > (x - pos_x) ** 2 + (y - pos_y) ** 2)
-            rgb <= 3'b110;
+        // draw a red heart
+        if (soul_on)
+            rgb <= soul_rgb;
         
-        // TODO: Fix this formula
-        // display white boundaries
-        else if (x > 320 - size_out && x < 320 + size_out && y > 240 - size_out && y < 240 + size_out &&
-                x < 320 - size_in && x > 320 + size_in && y < 240 + size_in && y > 240 + size_in)
-            rgb <= 3'b111;
+        // draw white boundaries
+        else if ((x > 320 - size_out && x < 320 + size_out && y > 240 - size_out && y < 240 + size_out) &&
+                !(x > 320 - size_in && x < 320 + size_in && y > 240 - size_in && y < 240 + size_in))
+            rgb <= 3'b111; // WHITE
         
-        // display nothing
+        // draw monster HP bar
+        else if (x > 100 && x < monster_hp * 15 && y > 350 && y < 360)
+            rgb <= 3'b100; // GREEN
+
+        // draw player HP bar
+        else if (x > 100 && x < player_hp * 15 && y > 370 && y < 375)
+            rgb <= 3'b101; // YELLOW
+        
+        // draw nothing
         else
-            rgb <= 3'b000;
+            rgb <= 3'b000; // BLACK
     end
     
         
-    integer speed = 2;
     always @(posedge clk) begin
         // move red dot
         if (up) pos_y = pos_y - speed;
@@ -65,10 +76,10 @@ module game_page(
         if (right) pos_x = pos_x + speed;
         
         // boundaries collision
-        if (pos_x < 320 - r - size_in) pos_x = 320 - r - size_in;
-        if (pos_x > 320 + r + size_in) pos_x = 320 + r + size_in;
-        if (pos_y < 240 - r - size_in) pos_y = 240 - r - size_in;
-        if (pos_y > 240 + r + size_in) pos_y = 240 + r + size_in;
+        if (pos_x < 320 - size_in) pos_x = 320 - size_in;
+        if (pos_x > 320 + size_in - soul_width) pos_x = 320 + size_in - soul_width;
+        if (pos_y < 240 - size_in) pos_y = 240 - size_in;
+        if (pos_y > 240 + size_in - soul_height) pos_y = 240 + size_in - soul_height;
     end
 
 endmodule
