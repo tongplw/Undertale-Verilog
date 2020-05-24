@@ -21,7 +21,7 @@
 
 
 module menu_page(
-    input clk,
+    input clk, on,
     input [11:0] x, y, 
     output reg [2:0] rgb,
     input left, right,
@@ -47,7 +47,7 @@ module menu_page(
         else rgb <= 3'b000; // BLACK
     end
     
-    always @(posedge clk) begin
+    always @(posedge clk && on) begin
         if (left) selection = selection - 1;
         if (right) selection = selection + 1;
     end

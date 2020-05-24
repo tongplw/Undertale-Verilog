@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module game_page(
-    input clk,
+    input clk, on,
     input [11:0] x, y, 
     output reg [2:0] rgb,
     input up, left, down, right, space
@@ -65,7 +65,12 @@ module game_page(
         else rgb <= 3'b000; // BLACK        
     end
         
-    always @(posedge clk) begin
+//    always @(posedge on) begin
+//        pos_x <= 320 - soul_width / 2;
+//        pos_y <= 240 - soul_height / 2;
+//    end
+    
+    always @(posedge clk && on) begin
         // move red dot
         if (up) pos_y = pos_y - speed;
         if (down) pos_y = pos_y + speed;

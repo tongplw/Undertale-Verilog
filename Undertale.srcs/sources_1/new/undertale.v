@@ -40,8 +40,8 @@ module undertale(
     
     // Read Image File
     intro_page intro_page(x, y, intro_rgb);
-    game_page game_page(clk, x, y, game_rgb, up, left, down, right, space);
-    menu_page menu_page(clk, x, y, faim_rgb, left, right, selection);
+    menu_page menu_page(clk, page_num==1, x, y, faim_rgb, left, right, selection);
+    game_page game_page(clk, page_num==2, x, y, game_rgb, up, left, down, right, space);
     color_decode color_decode(selected_rgb, rgb);
     
     assign selected_rgb = (page_num == 0) ? intro_rgb : (page_num == 1) ? faim_rgb : game_rgb;
