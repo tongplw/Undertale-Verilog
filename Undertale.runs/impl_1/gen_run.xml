@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1590338299">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1590341193">
   <File Type="BITSTR-BMM" Name="undertale_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="undertale_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="undertale_timing_summary_init.rpt"/>
@@ -85,13 +85,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/faim_page.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/game_page.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -107,6 +100,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/intro_page.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/menu_page.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -129,6 +129,14 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/undertale.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/faim_page.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

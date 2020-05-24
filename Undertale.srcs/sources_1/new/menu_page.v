@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 05/24/2020 09:30:19 PM
+// Create Date: 05/25/2020 12:24:48 AM
 // Design Name: 
-// Module Name: faim_page
+// Module Name: menu_page
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module faim_page(
+module menu_page(
     input clk,
     input [11:0] x, y, 
     output reg [2:0] rgb,

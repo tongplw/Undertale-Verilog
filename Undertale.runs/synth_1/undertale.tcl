@@ -41,10 +41,10 @@ read_mem {
 read_verilog -library xil_defaultlib {
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/controller.v
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/game_page.v
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v
+  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/menu_page.v
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/vga.v
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v

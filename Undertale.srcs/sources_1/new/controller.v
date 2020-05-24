@@ -24,9 +24,9 @@ module controller(
     input clk,
     input [7:0] command,
     input ena, de,
+    input [1:0] selection,
     output reg [1:0] page_num,
-    output reg up, left, down, right, space,
-    output reg game_on, faim_on
+    output reg up, left, down, right, space
     );
     
     reg change_page = 0;
@@ -53,8 +53,6 @@ module controller(
             down = 0;
             right = 0;
             space = 0;
-            game_on = 0;
-            faim_on = 0;
         end
         else begin
             push = 0;
@@ -63,7 +61,10 @@ module controller(
             if (~de && change_page) begin
                 change_page = 0;
                 if (page_num == 0) page_num = 1;
-                else if (page_num == 1) begin page_num = 2; counter = 0; game_on = 1; end
+                else if (page_num == 1) begin 
+                    if (selection == 0) begin page_num = 2; counter = 0; end // select fight --> fight
+                    else if (selection == 3) page_num = 0; // select mercy --> exit
+                end
             end
         end
         
@@ -72,7 +73,6 @@ module controller(
             counter = counter + 1;
             if (counter == 6 * 10**8) begin
                 page_num = 1;
-                faim_on = 1;
             end
         end
 

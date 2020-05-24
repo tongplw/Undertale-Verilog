@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module game_page(
-    input clk, game_on,
+    input clk,
     input [11:0] x, y, 
     output reg [2:0] rgb,
     input up, left, down, right, space
@@ -32,7 +32,8 @@ module game_page(
     parameter soul_height = 12;
     parameter speed = 2;
     
-    reg [11:0] pos_x, pos_y;
+    reg [11:0] pos_x = 320 - soul_width / 2;
+    reg [11:0] pos_y = 240 - soul_height / 2;
     reg [5:0] player_hp = 20;
     reg [5:0] monster_hp = 20;
     
@@ -63,11 +64,6 @@ module game_page(
         // draw nothing
         else rgb <= 3'b000; // BLACK        
     end
-    
-//    always @(posedge game_on) begin
-//        pos_x = 320 - soul_width / 2;
-//        pos_y = 240 - soul_height / 2;
-//    end
         
     always @(posedge clk) begin
         // move red dot
