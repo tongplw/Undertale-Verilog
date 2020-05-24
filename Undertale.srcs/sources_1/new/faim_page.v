@@ -21,7 +21,7 @@
 
 
 module faim_page(
-    input clk,
+    input clk, faim_on,
     input [11:0] x, y, 
     output reg [2:0] rgb,
     input left, right
@@ -32,10 +32,10 @@ module faim_page(
     wire fight_on, act_on, item_on, mercy_on;
     wire [2:0] fight_rgb, act_rgb, item_rgb, mercy_rgb;
     
-    image #("fight_but.list", 95, 38)(x - 80, y - 400, fight_rgb, fight_on);
-    image #("act_but.list", 95, 38)(x - 190, y - 400, act_rgb, act_on);
-    image #("item_but.list", 95, 38)(x - 300, y - 400, item_rgb, item_on);
-    image #("mercy_but.list", 95, 38)(x - 410, y - 400, mercy_rgb, mercy_on);
+    image #("fight_but.list", 95, 38)(x - 90, y - 400, fight_rgb, fight_on);
+    image #("act_but.list", 95, 38)(x - 200, y - 400, act_rgb, act_on);
+    image #("item_but.list", 95, 38)(x - 310, y - 400, item_rgb, item_on);
+    image #("mercy_but.list", 95, 38)(x - 420, y - 400, mercy_rgb, mercy_on);
 
     always @(x or y) begin
         // draw 4 buttons
@@ -47,6 +47,10 @@ module faim_page(
         // draw nothing
         else rgb <= 3'b000; // BLACK
     end
+    
+//    always @(posedge faim_on) begin
+//        selection = 0;
+//    end
     
     always @(posedge clk) begin
         if (left) selection = selection - 1;

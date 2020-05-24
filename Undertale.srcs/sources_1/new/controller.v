@@ -25,11 +25,14 @@ module controller(
     input [7:0] command,
     input ena, de,
     output reg [1:0] page_num,
-    output reg up, left, down, right, space
+    output reg up, left, down, right, space,
+    output reg game_on, faim_on
     );
     
     reg change_page = 0;
     reg push = 0;
+    integer counter = 0;
+    
     initial page_num = 0;
     
     always @(posedge clk) begin
@@ -50,6 +53,8 @@ module controller(
             down = 0;
             right = 0;
             space = 0;
+            game_on = 0;
+            faim_on = 0;
         end
         else begin
             push = 0;
@@ -57,7 +62,17 @@ module controller(
             // change page only when displaying nothing
             if (~de && change_page) begin
                 change_page = 0;
-                page_num = page_num + 1;
+                if (page_num == 0) page_num = 1;
+                else if (page_num == 1) begin page_num = 2; counter = 0; game_on = 1; end
+            end
+        end
+        
+        // wait for 6 seconds = 6 * 100 MHz
+        if (page_num == 2) begin
+            counter = counter + 1;
+            if (counter == 6 * 10**8) begin
+                page_num = 1;
+                faim_on = 1;
             end
         end
 

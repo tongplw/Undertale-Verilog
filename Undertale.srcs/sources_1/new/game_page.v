@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module game_page(
-    input clk,
+    input clk, game_on,
     input [11:0] x, y, 
     output reg [2:0] rgb,
     input up, left, down, right, space
@@ -64,7 +64,7 @@ module game_page(
         else rgb <= 3'b000; // BLACK        
     end
     
-//    always @(page_num) begin
+//    always @(posedge game_on) begin
 //        pos_x = 320 - soul_width / 2;
 //        pos_y = 240 - soul_height / 2;
 //    end
