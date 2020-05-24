@@ -47,13 +47,18 @@ module undertale(
     
     // Read Image File
     intro_page intro_page(page_num, x, y, intro_rgb, intro_on);
-    game_page game_page(clk, page_num, x, y, game_rgb, up, left, down, right, space, game_on);
+
     
     // decode color
     color_decode color_decode(rgb_buffer, rgb);
     
     
-    // game components 
+    /* 
+        ----- game components -----
+    */ 
+    // player dot
+    playerDot playerDot(clk, page_num, x, y, game_rgb, up, left, down, right, space, game_on);
+    // hp
     playerHealthBarComponent hp(.clk(clk),
                                 .pageNum(page_num),
                                 .x(x),
@@ -61,6 +66,7 @@ module undertale(
                                 .rgbCode(hp_rgb),
                                 .hpOn(hp_on)
                                 );
+    // ehp
     enemyHealthBarComponent ehp(.clk(clk),
                                 .pageNum(page_num),
                                 .x(x),
@@ -68,6 +74,7 @@ module undertale(
                                 .rgbCode(ehp_rgb),
                                 .ehpOn(ehp_on)
                                 );
+    // Box boundary 
     boxComponent box (.x(x),
                       .y(y),
                       .rgbCode(box_rgb),
