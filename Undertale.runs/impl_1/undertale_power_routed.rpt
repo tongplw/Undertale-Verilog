@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Sun May 24 01:49:13 2020
-| Host             : tongplw running 64-bit major release  (build 9200)
+| Date             : Sun May 24 03:43:52 2020
+| Host             : DESKTOP-9OGL4CH running 64-bit major release  (build 9200)
 | Command          : report_power -file undertale_power_routed.rpt -pb undertale_power_summary_routed.pb -rpx undertale_power_routed.rpx
 | Design           : undertale
 | Device           : xc7a35tcpg236-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.168        |
+| Total On-Chip Power (W)  | 0.124        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.096        |
+| Dynamic (W)              | 0.052        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.2         |
-| Junction Temperature (C) | 25.8         |
+| Max Ambient (C)          | 84.4         |
+| Junction Temperature (C) | 25.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.046 |    11223 |       --- |             --- |
-|   LUT as Logic |     0.044 |     7565 |     20800 |           36.37 |
-|   F7/F8 Muxes  |     0.002 |     3210 |     32600 |            9.85 |
-|   CARRY4       |    <0.001 |       47 |      8150 |            0.58 |
+| Slice Logic    |     0.023 |     4541 |       --- |             --- |
+|   LUT as Logic |     0.022 |     3455 |     20800 |           16.61 |
+|   F7/F8 Muxes  |    <0.001 |      792 |     32600 |            2.43 |
+|   CARRY4       |    <0.001 |       75 |      8150 |            0.92 |
 |   Register     |    <0.001 |      141 |     41600 |            0.34 |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |       21 |       --- |             --- |
-| Signals        |     0.043 |     5018 |       --- |             --- |
+| Signals        |     0.021 |     3116 |       --- |             --- |
 | DSPs           |     0.006 |        7 |        90 |            7.78 |
 | I/O            |    <0.001 |       17 |       106 |           16.04 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.168 |          |           |                 |
+| Total          |     0.124 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.106 |       0.096 |      0.010 |
+| Vccint    |       1.000 |     0.061 |       0.052 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -143,10 +143,9 @@ Table of Contents
 +--------------+-----------+
 | Name         | Power (W) |
 +--------------+-----------+
-| undertale    |     0.096 |
-|   game_page  |     0.009 |
-|   intro_page |     0.085 |
-|   uart       |     0.001 |
+| undertale    |     0.052 |
+|   game_page  |     0.010 |
+|   intro_page |     0.040 |
 +--------------+-----------+
 
 

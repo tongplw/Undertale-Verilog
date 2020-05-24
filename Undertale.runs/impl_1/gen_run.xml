@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1590259218">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1590266442">
   <File Type="BITSTR-BMM" Name="undertale_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="undertale_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="undertale_timing_summary_init.rpt"/>

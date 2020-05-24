@@ -39,14 +39,28 @@ module game_page(
     integer size_out = 20;
     integer size_in = 18;
     
+    integer thickness = 3;
+    integer left_boundary = 160;
+    integer right_boundary = 480;
+    integer top_boundary = 120;
+    integer bottom_boundary = 360;
+    
     always @(x or y) begin
         // display a red dot
         if (r ** 2 > (x - pos_x) ** 2 + (y - pos_y) ** 2)
             rgb <= 3'b110;
         // display boundaries
-        else if (pos_x > 320 - size_out && pos_x < 320 + size_out && pos_y > 240 - size_out && pos_y < 240 + size_out &&
-                pos_x < 320 - size_in && pos_x > 320 + size_in && pos_y < 240 + size_in && pos_y > 240 + size_in)
-            rgb <= 3'b111;
+//        else if (pos_x > 320 - size_out && pos_x < 320 + size_out && pos_y > 240 - size_out && pos_y < 240 + size_out &&
+//                pos_x < 320 - size_in && pos_x > 320 + size_in && pos_y < 240 + size_in && pos_y > 240 + size_in)
+//            rgb <= 3'b111;
+            
+        else if ((x>=left_boundary-thickness && x<left_boundary && y>=top_boundary-thickness && y<bottom_boundary+thickness) || 
+                 (x>=right_boundary && x<right_boundary+thickness && y>=top_boundary-thickness && y<bottom_boundary+thickness) ||
+                 (y>=top_boundary-thickness && y<top_boundary && x>=left_boundary-thickness && x<right_boundary+thickness) || 
+                 (y>=bottom_boundary && y<bottom_boundary+thickness && x>=left_boundary-thickness && x<right_boundary+thickness)) 
+        begin
+            rgb <= 3'b111;         
+        end
         // display nothing
         else
             rgb <= 3'b000;
@@ -56,10 +70,10 @@ module game_page(
     // move red dot
     integer speed = 2;
     always @(posedge clk) begin
-        if (up) pos_y = pos_y - speed;
-        if (down) pos_y = pos_y + speed;
-        if (left) pos_x = pos_x - speed;
-        if (right) pos_x = pos_x + speed;
+        if (up) pos_y = ((pos_y - speed) > top_boundary+7) ? pos_y - speed:pos_y;
+        if (down) pos_y = ((pos_y + speed) < bottom_boundary-7) ? pos_y + speed:pos_y;
+        if (left) pos_x = ((pos_x - speed) > left_boundary+7) ? pos_x - speed:pos_x;
+        if (right) pos_x = ((pos_x + speed) < right_boundary-7) ? pos_x + speed:pos_x;
     end
 
 endmodule
