@@ -33,10 +33,15 @@ set_property ip_cache_permissions {read write} [current_project]
 read_mem {
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro.list
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/soul.list
+  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/fight_but.list
+  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/act_but.list
+  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/item_but.list
+  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/mercy_but.list
 }
 read_verilog -library xil_defaultlib {
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/controller.v
+  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/game_page.v
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v
   C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v

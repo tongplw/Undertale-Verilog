@@ -14,15 +14,15 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 16944 
+INFO: Helper process launched with PID 17264 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 381.102 ; gain = 99.277
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 381.203 ; gain = 100.082
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'undertale' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v:23]
 INFO: [Synth 8-6157] synthesizing module 'intro_page' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:23]
 	Parameter IMG_WIDTH bound to: 640 - type: integer 
 	Parameter IMG_HEIGHT bound to: 480 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'intro.list' is read successfully [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:34]
+INFO: [Synth 8-3876] $readmem data file 'intro.list' is read successfully [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:33]
 INFO: [Synth 8-6155] done synthesizing module 'intro_page' (1#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v:23]
 INFO: [Synth 8-6157] synthesizing module 'game_page' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/game_page.v:22]
 	Parameter size_out bound to: 60 - type: integer 
@@ -36,15 +36,58 @@ INFO: [Synth 8-6157] synthesizing module 'image' [C:/Users/tongplw/Desktop/under
 	Parameter HEIGHT bound to: 12 - type: integer 
 INFO: [Synth 8-3876] $readmem data file 'soul.list' is read successfully [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:30]
 INFO: [Synth 8-6155] done synthesizing module 'image' (2#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:23]
-WARNING: [Synth 8-567] referenced signal 'soul_on' should be on the sensitivity list [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/game_page.v:47]
-WARNING: [Synth 8-567] referenced signal 'soul_rgb' should be on the sensitivity list [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/game_page.v:47]
+WARNING: [Synth 8-567] referenced signal 'soul_on' should be on the sensitivity list [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/game_page.v:45]
+WARNING: [Synth 8-567] referenced signal 'soul_rgb' should be on the sensitivity list [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/game_page.v:45]
 INFO: [Synth 8-6155] done synthesizing module 'game_page' (3#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/game_page.v:22]
+INFO: [Synth 8-6157] synthesizing module 'faim_page' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:23]
+INFO: [Synth 8-6157] synthesizing module 'image__parameterized0' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:23]
+	Parameter FILE_NAME bound to: fight_but.list - type: string 
+	Parameter WIDTH bound to: 95 - type: integer 
+	Parameter HEIGHT bound to: 38 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'fight_but.list' is read successfully [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'image__parameterized0' (3#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (12) of module 'image__parameterized0' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (12) of module 'image__parameterized0' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:35]
+INFO: [Synth 8-6157] synthesizing module 'image__parameterized1' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:23]
+	Parameter FILE_NAME bound to: act_but.list - type: string 
+	Parameter WIDTH bound to: 95 - type: integer 
+	Parameter HEIGHT bound to: 38 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'act_but.list' is read successfully [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'image__parameterized1' (3#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (12) of module 'image__parameterized1' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:36]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (12) of module 'image__parameterized1' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:36]
+INFO: [Synth 8-6157] synthesizing module 'image__parameterized2' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:23]
+	Parameter FILE_NAME bound to: item_but.list - type: string 
+	Parameter WIDTH bound to: 95 - type: integer 
+	Parameter HEIGHT bound to: 38 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'item_but.list' is read successfully [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'image__parameterized2' (3#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (12) of module 'image__parameterized2' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:37]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (12) of module 'image__parameterized2' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:37]
+INFO: [Synth 8-6157] synthesizing module 'image__parameterized3' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:23]
+	Parameter FILE_NAME bound to: mercy_but.list - type: string 
+	Parameter WIDTH bound to: 95 - type: integer 
+	Parameter HEIGHT bound to: 38 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'mercy_but.list' is read successfully [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'image__parameterized3' (3#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (12) of module 'image__parameterized3' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:38]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (12) of module 'image__parameterized3' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:38]
+WARNING: [Synth 8-567] referenced signal 'fight_on' should be on the sensitivity list [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:40]
+WARNING: [Synth 8-567] referenced signal 'selection' should be on the sensitivity list [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:40]
+WARNING: [Synth 8-567] referenced signal 'fight_rgb' should be on the sensitivity list [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:40]
+WARNING: [Synth 8-567] referenced signal 'act_on' should be on the sensitivity list [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:40]
+WARNING: [Synth 8-567] referenced signal 'act_rgb' should be on the sensitivity list [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:40]
+WARNING: [Synth 8-567] referenced signal 'item_on' should be on the sensitivity list [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:40]
+WARNING: [Synth 8-567] referenced signal 'item_rgb' should be on the sensitivity list [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:40]
+WARNING: [Synth 8-567] referenced signal 'mercy_on' should be on the sensitivity list [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:40]
+WARNING: [Synth 8-567] referenced signal 'mercy_rgb' should be on the sensitivity list [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'faim_page' (4#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/faim_page.v:23]
 INFO: [Synth 8-6157] synthesizing module 'color_decode' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v:39]
-INFO: [Synth 8-6155] done synthesizing module 'color_decode' (4#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'color_decode' (5#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v:23]
 INFO: [Synth 8-6157] synthesizing module 'controller' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/controller.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/controller.v:38]
-INFO: [Synth 8-6155] done synthesizing module 'controller' (5#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/controller.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (6#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/controller.v:23]
 INFO: [Synth 8-6157] synthesizing module 'vga' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/vga.v:22]
 	Parameter WIDTH bound to: 640 - type: integer 
 	Parameter HEIGHT bound to: 480 - type: integer 
@@ -60,23 +103,21 @@ INFO: [Synth 8-6157] synthesizing module 'vga' [C:/Users/tongplw/Desktop/underta
 	Parameter HS_END bound to: 751 - type: integer 
 	Parameter VS_START bound to: 490 - type: integer 
 	Parameter VS_END bound to: 491 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'vga' (6#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/vga.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'vga' (7#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/vga.v:22]
 INFO: [Synth 8-6157] synthesizing module 'uart' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:23]
 INFO: [Synth 8-6157] synthesizing module 'baudrate_gen' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:133]
-INFO: [Synth 8-6155] done synthesizing module 'baudrate_gen' (7#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:133]
+INFO: [Synth 8-6155] done synthesizing module 'baudrate_gen' (8#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:133]
 INFO: [Synth 8-6157] synthesizing module 'receiver' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:95]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:119]
-INFO: [Synth 8-6155] done synthesizing module 'receiver' (8#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'receiver' (9#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:95]
 INFO: [Synth 8-6157] synthesizing module 'transmitter' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:53]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:80]
-INFO: [Synth 8-6155] done synthesizing module 'transmitter' (9#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'uart' (10#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'undertale' (11#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v:23]
-WARNING: [Synth 8-3331] design game_page has unconnected port page_num
+INFO: [Synth 8-6155] done synthesizing module 'transmitter' (10#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'uart' (11#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'undertale' (12#1) [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v:23]
 WARNING: [Synth 8-3331] design game_page has unconnected port space
-WARNING: [Synth 8-3331] design intro_page has unconnected port page_num
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 663.426 ; gain = 381.602
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 675.863 ; gain = 394.742
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -89,10 +130,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 663.426 ; gain = 381.602
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 675.863 ; gain = 394.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 663.426 ; gain = 381.602
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 675.863 ; gain = 394.742
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -103,30 +144,30 @@ Parsing XDC File [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/cons
 Finished Parsing XDC File [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/constrs_1/new/Basys 3 Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/constrs_1/new/Basys 3 Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/undertale_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/undertale_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 945.566 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 954.957 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 945.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 954.957 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 945.570 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 945.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 954.957 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 954.957 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 945.570 ; gain = 663.746
+Finished Constraint Validation : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 954.957 ; gain = 673.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 945.570 ; gain = 663.746
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 954.957 ; gain = 673.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 945.570 ; gain = 663.746
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 954.957 ; gain = 673.836
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "rom" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "change_page" won't be mapped to RAM because it is too sparse
@@ -139,9 +180,9 @@ INFO: [Synth 8-5546] ROM "receiving0" won't be mapped to RAM because it is too s
 INFO: [Synth 8-5546] ROM "data_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "sending0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "bit_out0" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-327] inferring latch for variable 'hex_reg' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v:40]
+WARNING: [Synth 8-327] inferring latch for variable 'hex_reg' [C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v:41]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:19 ; elapsed = 00:01:26 . Memory (MB): peak = 1174.363 ; gain = 892.539
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:06 ; elapsed = 00:02:21 . Memory (MB): peak = 1189.316 ; gain = 908.195
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -149,7 +190,7 @@ Report RTL Partitions:
 |      |RTL Partition  |Replication |Instances |
 +------+---------------+------------+----------+
 |1     |rom_intro_page |           1|     49149|
-|2     |undertale__GC0 |           1|      1410|
+|2     |undertale__GC0 |           1|      3286|
 +------+---------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -158,24 +199,29 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 5     
 	   3 Input     12 Bit       Adders := 4     
 	   2 Input     10 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 2     
+	   3 Input      2 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	               16 Bit    Registers := 1     
 	               12 Bit    Registers := 2     
 	               10 Bit    Registers := 2     
 	                8 Bit    Registers := 5     
-	                1 Bit    Registers := 20    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 19    
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 2     
-	   7 Input     12 Bit        Muxes := 1     
+	   8 Input     12 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 2     
 	  10 Input      8 Bit        Muxes := 1     
 	 157 Input      3 Bit        Muxes := 1     
 	   5 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 7     
+	   2 Input      3 Bit        Muxes := 10    
+	   8 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 6     
 	   2 Input      1 Bit        Muxes := 9     
 	  10 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
@@ -188,7 +234,7 @@ Hierarchical RTL Component report
 Module undertale 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 Module image 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -202,15 +248,27 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 2     
 	   5 Input      3 Bit        Muxes := 1     
+Module faim_page 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 5     
+	   3 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 8     
 Module color_decode 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   7 Input     12 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 1     
+	   8 Input     12 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 1     
 Module controller 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	                1 Bit    Registers := 8     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
 +---Muxes : 
 	   7 Input      1 Bit        Muxes := 6     
 	   2 Input      1 Bit        Muxes := 6     
@@ -282,15 +340,29 @@ INFO: [Synth 8-5546] ROM "uart/receiver/receiving0" won't be mapped to RAM becau
 INFO: [Synth 8-5546] ROM "uart/receiver/data_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "uart/transmitter/sending0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "uart/transmitter/bit_out0" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP faim_page/nolabel_line35/rgb1, operation Mode is: C+A*(B:0x5f).
+DSP Report: operator faim_page/nolabel_line35/rgb1 is absorbed into DSP faim_page/nolabel_line35/rgb1.
+DSP Report: operator faim_page/nolabel_line35/rgb2 is absorbed into DSP faim_page/nolabel_line35/rgb1.
+Why this net has no driver: _order_recur <const0>
+DSP Report: Generating DSP faim_page/nolabel_line36/rgb1, operation Mode is: C+A*(B:0x5f).
+DSP Report: operator faim_page/nolabel_line36/rgb1 is absorbed into DSP faim_page/nolabel_line36/rgb1.
+DSP Report: operator faim_page/nolabel_line35/rgb2 is absorbed into DSP faim_page/nolabel_line36/rgb1.
+Why this net has no driver: _order_recur <const0>
+DSP Report: Generating DSP faim_page/nolabel_line37/rgb1, operation Mode is: C+A*(B:0x5f).
+DSP Report: operator faim_page/nolabel_line37/rgb1 is absorbed into DSP faim_page/nolabel_line37/rgb1.
+DSP Report: operator faim_page/nolabel_line35/rgb2 is absorbed into DSP faim_page/nolabel_line37/rgb1.
+Why this net has no driver: _order_recur <const0>
+DSP Report: Generating DSP faim_page/nolabel_line38/rgb1, operation Mode is: C+A*(B:0x5f).
+DSP Report: operator faim_page/nolabel_line38/rgb1 is absorbed into DSP faim_page/nolabel_line38/rgb1.
+DSP Report: operator faim_page/nolabel_line35/rgb2 is absorbed into DSP faim_page/nolabel_line38/rgb1.
+Why this net has no driver: _order_recur <const0>
 DSP Report: Generating DSP intro_page/rgb0, operation Mode is: C+A*(B:0x280).
 DSP Report: operator intro_page/rgb0 is absorbed into DSP intro_page/rgb0.
 DSP Report: operator intro_page/rgb1 is absorbed into DSP intro_page/rgb0.
-INFO: [Synth 8-3886] merging instance 'i_0/color_decode/hex_reg[4]' (LD) to 'i_0/color_decode/hex_reg[9]'
 INFO: [Synth 8-3886] merging instance 'i_0/color_decode/hex_reg[5]' (LD) to 'i_0/color_decode/hex_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_0/color_decode/hex_reg[6]' (LD) to 'i_0/color_decode/hex_reg[8]'
 INFO: [Synth 8-3886] merging instance 'i_0/color_decode/hex_reg[9]' (LD) to 'i_0/color_decode/hex_reg[10]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:42 ; elapsed = 00:01:50 . Memory (MB): peak = 1174.363 ; gain = 892.539
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:54 ; elapsed = 00:04:14 . Memory (MB): peak = 1189.316 ; gain = 908.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -301,6 +373,14 @@ ROM:
 |Module Name | RTL Object | Depth x Width | Implemented As | 
 +------------+------------+---------------+----------------+
 |intro_page  | p_0_out    | 524288x3      | LUT            | 
+|image       | p_0_out    | 4096x3        | LUT            | 
+|image       | p_0_out    | 4096x3        | LUT            | 
+|image       | p_0_out    | 4096x3        | LUT            | 
+|image       | p_0_out    | 4096x3        | LUT            | 
+|undertale   | p_0_out    | 4096x3        | LUT            | 
+|undertale   | p_0_out    | 4096x3        | LUT            | 
+|undertale   | p_0_out    | 4096x3        | LUT            | 
+|undertale   | p_0_out    | 4096x3        | LUT            | 
 +------------+------------+---------------+----------------+
 
 
@@ -308,6 +388,10 @@ DSP: Preliminary Mapping  Report (see note below)
 +------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|image       | C+A*(B:0x5f)  | 12     | 7      | 12     | -      | 12     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|image       | C+A*(B:0x5f)  | 12     | 7      | 12     | -      | 12     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|image       | C+A*(B:0x5f)  | 12     | 7      | 12     | -      | 12     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|image       | C+A*(B:0x5f)  | 12     | 7      | 12     | -      | 12     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |intro_page  | C+A*(B:0x280) | 12     | 10     | 12     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 +------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
@@ -321,19 +405,19 @@ Report RTL Partitions:
 |      |RTL Partition  |Replication |Instances |
 +------+---------------+------------+----------+
 |1     |rom_intro_page |           1|     14082|
-|2     |undertale__GC0 |           1|       868|
+|2     |undertale__GC0 |           1|      2571|
 +------+---------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:14 ; elapsed = 00:02:22 . Memory (MB): peak = 1174.363 ; gain = 892.539
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:27 ; elapsed = 00:04:47 . Memory (MB): peak = 1189.316 ; gain = 908.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:18 ; elapsed = 00:02:26 . Memory (MB): peak = 1174.363 ; gain = 892.539
+Finished Timing Optimization : Time (s): cpu = 00:04:35 ; elapsed = 00:04:56 . Memory (MB): peak = 1189.316 ; gain = 908.195
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -341,13 +425,13 @@ Report RTL Partitions:
 |      |RTL Partition  |Replication |Instances |
 +------+---------------+------------+----------+
 |1     |rom_intro_page |           1|     14082|
-|2     |undertale__GC0 |           1|       855|
+|2     |undertale__GC0 |           1|      2515|
 +------+---------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:23 ; elapsed = 00:02:32 . Memory (MB): peak = 1227.199 ; gain = 945.375
+Finished Technology Mapping : Time (s): cpu = 00:04:44 ; elapsed = 00:05:06 . Memory (MB): peak = 1259.223 ; gain = 978.102
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -371,7 +455,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:26 ; elapsed = 00:02:34 . Memory (MB): peak = 1227.199 ; gain = 945.375
+Finished IO Insertion : Time (s): cpu = 00:04:46 ; elapsed = 00:05:08 . Memory (MB): peak = 1259.223 ; gain = 978.102
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -384,7 +468,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:26 ; elapsed = 00:02:34 . Memory (MB): peak = 1227.199 ; gain = 945.375
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:46 ; elapsed = 00:05:08 . Memory (MB): peak = 1259.223 ; gain = 978.102
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -396,25 +480,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:26 ; elapsed = 00:02:35 . Memory (MB): peak = 1227.199 ; gain = 945.375
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:47 ; elapsed = 00:05:09 . Memory (MB): peak = 1259.223 ; gain = 978.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:26 ; elapsed = 00:02:35 . Memory (MB): peak = 1227.199 ; gain = 945.375
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:47 ; elapsed = 00:05:09 . Memory (MB): peak = 1259.223 ; gain = 978.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:36 ; elapsed = 00:02:44 . Memory (MB): peak = 1227.199 ; gain = 945.375
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:51 ; elapsed = 00:05:13 . Memory (MB): peak = 1259.223 ; gain = 978.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:36 ; elapsed = 00:02:44 . Memory (MB): peak = 1227.199 ; gain = 945.375
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:51 ; elapsed = 00:05:13 . Memory (MB): peak = 1259.223 ; gain = 978.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -432,62 +516,67 @@ Report Cell Usage:
 +------+--------+------+
 |1     |BUFG    |     2|
 |2     |CARRY4  |    33|
-|3     |DSP48E1 |     1|
+|3     |DSP48E1 |     5|
 |4     |LUT1    |    13|
-|5     |LUT2    |    77|
-|6     |LUT3    |    39|
-|7     |LUT4    |   167|
-|8     |LUT5    |  1142|
-|9     |LUT6    |  6339|
-|10    |MUXF7   |  2506|
-|11    |MUXF8   |   705|
-|12    |FDRE    |   127|
+|5     |LUT2    |    93|
+|6     |LUT3    |    47|
+|7     |LUT4    |   176|
+|8     |LUT5    |  1179|
+|9     |LUT6    |  6590|
+|10    |MUXF7   |  2582|
+|11    |MUXF8   |   714|
+|12    |FDRE    |   130|
 |13    |FDSE    |    10|
-|14    |LD      |     8|
+|14    |LD      |    10|
 |15    |IBUF    |     2|
 |16    |OBUF    |    15|
 +------+--------+------+
 
 Report Instance Areas: 
-+------+-------------------+-------------+------+
-|      |Instance           |Module       |Cells |
-+------+-------------------+-------------+------+
-|1     |top                |             | 11186|
-|2     |  color_decode     |color_decode |    19|
-|3     |  controller       |controller   |    15|
-|4     |  game_page        |game_page    |   105|
-|5     |    nolabel_line45 |image        |    24|
-|6     |  intro_page       |intro_page   | 10711|
-|7     |  uart             |uart         |   166|
-|8     |    baudrate_gen   |baudrate_gen |    58|
-|9     |    receiver       |receiver     |    47|
-|10    |    transmitter    |transmitter  |    39|
-|11    |  vga              |vga          |   151|
-+------+-------------------+-------------+------+
++------+-------------------+----------------------+------+
+|      |Instance           |Module                |Cells |
++------+-------------------+----------------------+------+
+|1     |top                |                      | 11601|
+|2     |  color_decode     |color_decode          |    27|
+|3     |  controller       |controller            |    25|
+|4     |  faim_page        |faim_page             |   359|
+|5     |    nolabel_line35 |image__parameterized0 |    90|
+|6     |    nolabel_line36 |image__parameterized1 |    85|
+|7     |    nolabel_line37 |image__parameterized2 |   101|
+|8     |    nolabel_line38 |image__parameterized3 |    79|
+|9     |  game_page        |game_page             |   105|
+|10    |    nolabel_line43 |image                 |    24|
+|11    |  intro_page       |intro_page            | 10694|
+|12    |  uart             |uart                  |   166|
+|13    |    baudrate_gen   |baudrate_gen          |    58|
+|14    |    receiver       |receiver              |    47|
+|15    |    transmitter    |transmitter           |    39|
+|16    |  vga              |vga                   |   206|
++------+-------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:36 ; elapsed = 00:02:44 . Memory (MB): peak = 1227.199 ; gain = 945.375
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:51 ; elapsed = 00:05:14 . Memory (MB): peak = 1259.223 ; gain = 978.102
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:12 ; elapsed = 00:02:32 . Memory (MB): peak = 1227.199 ; gain = 663.230
-Synthesis Optimization Complete : Time (s): cpu = 00:02:36 ; elapsed = 00:02:45 . Memory (MB): peak = 1227.199 ; gain = 945.375
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:19 ; elapsed = 00:04:50 . Memory (MB): peak = 1259.223 ; gain = 699.008
+Synthesis Optimization Complete : Time (s): cpu = 00:04:52 ; elapsed = 00:05:14 . Memory (MB): peak = 1259.223 ; gain = 978.102
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 3253 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 3344 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'undertale' is not ideal for floorplanning, since the cellview 'intro_page' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1227.199 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1259.223 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 8 instances were transformed.
-  LD => LDCE: 8 instances
+  A total of 10 instances were transformed.
+  LD => LDCE: 10 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-65 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+77 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1227.199 ; gain = 958.145
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1227.199 ; gain = 0.000
+synth_design: Time (s): cpu = 00:04:57 ; elapsed = 00:05:20 . Memory (MB): peak = 1259.223 ; gain = 990.551
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1259.223 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/tongplw/Desktop/undertale-verilog/Undertale.runs/synth_1/undertale.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file undertale_utilization_synth.rpt -pb undertale_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May 24 15:19:29 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun May 24 21:46:11 2020...

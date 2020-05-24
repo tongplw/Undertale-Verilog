@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun May 24 15:23:48 2020
+| Date         : Sun May 24 22:03:54 2020
 | Host         : tongplw running 64-bit major release  (build 9200)
 | Command      : report_methodology -file undertale_methodology_drc_routed.rpt -pb undertale_methodology_drc_routed.pb -rpx undertale_methodology_drc_routed.rpx
 | Design       : undertale
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 77
+             Violations found: 79
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
 | TIMING-17 | Warning  | Non-clocked sequential cell | 69         |
-| TIMING-20 | Warning  | Non-clocked latch           | 8          |
+| TIMING-20 | Warning  | Non-clocked latch           | 10         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -410,10 +410,20 @@ Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch color_decode/hex_reg[7] cannot be properly analyzed as its control pin color_decode/hex_reg[7]/G is not reached by a timing clock
+The latch color_decode/hex_reg[4] cannot be properly analyzed as its control pin color_decode/hex_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
+Non-clocked latch  
+The latch color_decode/hex_reg[6] cannot be properly analyzed as its control pin color_decode/hex_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch color_decode/hex_reg[7] cannot be properly analyzed as its control pin color_decode/hex_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
 Non-clocked latch  
 The latch color_decode/hex_reg[8] cannot be properly analyzed as its control pin color_decode/hex_reg[8]/G is not reached by a timing clock
 Related violations: <none>

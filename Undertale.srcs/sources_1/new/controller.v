@@ -24,7 +24,7 @@ module controller(
     input clk,
     input [7:0] command,
     input ena, de,
-    output reg page_num,
+    output reg [1:0] page_num,
     output reg up, left, down, right, space
     );
     
@@ -57,7 +57,7 @@ module controller(
             // change page only when displaying nothing
             if (~de && change_page) begin
                 change_page = 0;
-                page_num = ~page_num;
+                page_num = page_num + 1;
             end
         end
 

@@ -21,7 +21,6 @@
 
 module game_page(
     input clk,
-    input page_num,
     input [11:0] x, y, 
     output reg [2:0] rgb,
     input up, left, down, right, space
@@ -33,8 +32,7 @@ module game_page(
     parameter soul_height = 12;
     parameter speed = 2;
     
-    reg [11:0] pos_x = 320 - soul_width / 2;
-    reg [11:0] pos_y = 240 - soul_height / 2;
+    reg [11:0] pos_x, pos_y;
     reg [5:0] player_hp = 20;
     reg [5:0] monster_hp = 20;
     
@@ -61,12 +59,15 @@ module game_page(
         // draw player HP bar
         else if (x > 100 && x < player_hp * 15 && y > 370 && y < 375)
             rgb <= 3'b101; // YELLOW
-        
+            
         // draw nothing
-        else
-            rgb <= 3'b000; // BLACK
+        else rgb <= 3'b000; // BLACK        
     end
     
+//    always @(page_num) begin
+//        pos_x = 320 - soul_width / 2;
+//        pos_y = 240 - soul_height / 2;
+//    end
         
     always @(posedge clk) begin
         // move red dot
@@ -76,10 +77,10 @@ module game_page(
         if (right) pos_x = pos_x + speed;
         
         // boundaries collision
-        if (pos_x < 320 - size_in) pos_x = 320 - size_in;
+        if (pos_x < 320 - size_in) pos_x = 320 - size_in + 1;
         if (pos_x > 320 + size_in - soul_width) pos_x = 320 + size_in - soul_width;
-        if (pos_y < 240 - size_in) pos_y = 240 - size_in;
-        if (pos_y > 240 + size_in - soul_height) pos_y = 240 + size_in - soul_height;
+        if (pos_y < 240 - size_in) pos_y = 240 - size_in + 1;
+        if (pos_y > 240 + size_in - soul_height) pos_y = 240 + size_in - soul_height; 
     end
 
 endmodule

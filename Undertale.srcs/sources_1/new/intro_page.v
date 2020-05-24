@@ -21,7 +21,6 @@
 
 
 module intro_page(
-    input page_num,
     input [11:0] x, y,
     output [2:0] rgb
     );
