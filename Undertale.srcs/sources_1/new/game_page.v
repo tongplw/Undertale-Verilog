@@ -43,23 +43,34 @@ module game_page(
     reg [5:0] player_hp = 20;
     reg [5:0] monster_hp = 20;
     reg bullet1_hit, bullet2_hit;
-    reg monster_hit = 0;
+    reg monster_hit = 0, monster_show = 0;
     
     integer bulletPos = 364;
     integer bulletPos2 = 240-size_in-1; 
     integer cnt = 0;
+    integer monster_cnt = 0;
     
-    wire soul_on;
-    wire [2:0] soul_rgb;
+    wire soul_on, monster_on_1, monster_on_2;
+    wire [2:0] soul_rgb, monster_rgb_1, monster_rgb_2;
     
     // read red_heart image
     image #("soul.list", soul_width, soul_height)(x - pos_x, y - pos_y, soul_rgb, soul_on);
+
+    // read monster
+    image #("monster_1.list", 100, 100)(x - 270, y - 60, monster_rgb_1, monster_on_1);
+    image #("monster_2.list", 100, 100)(x - 270, y - 60, monster_rgb_2, monster_on_2);
 
     always @(x or y) begin
         // draw a red heart
         if (soul_on)
             rgb <= soul_rgb;
-        
+            
+        // draw monster
+        else if (monster_on_1 && !monster_show)
+            rgb <= monster_rgb_1;
+        else if (monster_on_2 && monster_show)
+            rgb <= monster_rgb_2;
+                
         // draw white boundaries
         else if ((x > 320 - size_out && x < 320 + size_out && y > 240 - size_out && y < 240 + size_out) &&
                 !(x > 320 - size_in && x < 320 + size_in && y > 240 - size_in && y < 240 + size_in))
@@ -91,6 +102,12 @@ module game_page(
 //    end
     
     always @(posedge clk && on) begin
+        // monster duk-dik
+        monster_cnt = monster_cnt + 1;
+        if (monster_cnt == 5 * 10**7) begin
+            monster_cnt = 0;
+            monster_show = ~monster_show;
+        end
         
         // move bullets
         cnt = cnt + 1;
