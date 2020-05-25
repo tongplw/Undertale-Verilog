@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon May 25 19:20:45 2020
+| Date         : Tue May 26 01:57:56 2020
 | Host         : DESKTOP-9OGL4CH running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file undertale_control_sets_placed.rpt
 | Design       : undertale
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    21 |
-| Unused register locations in slices containing registers |    66 |
+| Number of unique control sets                            |    23 |
+| Unused register locations in slices containing registers |    64 |
 +----------------------------------------------------------+-------+
 
 
@@ -37,10 +37,11 @@ Table of Contents
 |      1 |            2 |
 |      2 |            1 |
 |      4 |            3 |
-|      8 |            4 |
-|      9 |            1 |
-|     10 |            3 |
-|     12 |            2 |
+|      6 |            2 |
+|      8 |            6 |
+|     10 |            2 |
+|     11 |            1 |
+|     12 |            1 |
 |     15 |            1 |
 |    16+ |            4 |
 +--------+--------------+
@@ -52,12 +53,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             101 |           47 |
+| No           | No                    | No                     |              40 |           20 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             168 |           64 |
-| Yes          | No                    | No                     |              16 |            4 |
+| No           | Yes                   | No                     |             135 |           54 |
+| Yes          | No                    | No                     |              88 |           38 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               1 |            1 |
+| Yes          | Yes                   | No                     |              33 |           19 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -68,26 +69,28 @@ Table of Contents
 |          Clock Signal         |           Enable Signal          |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
 +-------------------------------+----------------------------------+--------------------------------------+------------------+----------------+
 |  vga/pix_stb                  |                                  |                                      |                1 |              1 |
-|  baud                         | uart/transmitter/bit_out_i_2_n_1 | uart/transmitter/bit_out0            |                1 |              1 |
-|  controller/page_num_reg[1]_1 |                                  |                                      |                1 |              2 |
-|  clk_IBUF_BUFG                |                                  | controller/space12_out               |                2 |              4 |
-|  n_0_5515_BUFG                |                                  | game_page/game_over                  |                4 |              4 |
-|  n_0_5515_BUFG                |                                  | game_page/player_hp[5]_i_1_n_1       |                1 |              4 |
-|  baud                         |                                  | uart/receiver/count[7]_i_1_n_1       |                2 |              8 |
-|  baud                         |                                  | uart/transmitter/count[7]_i_1__0_n_1 |                2 |              8 |
-|  baud                         | uart/receiver/E[0]               |                                      |                2 |              8 |
-|  baud                         | uart/transmitter/temp[7]_i_1_n_1 |                                      |                2 |              8 |
-|  clk_IBUF_BUFG                |                                  |                                      |                5 |              9 |
-|  vga/line_clk_reg_n_1         |                                  | vga/v_val[9]_i_1_n_1                 |                3 |             10 |
-|  vga/pix_stb                  |                                  | vga/clear                            |                5 |             10 |
-|  vga/E[0]                     |                                  |                                      |                5 |             10 |
-|  n_0_5515_BUFG                |                                  | game_page/pos_y[11]_i_1_n_1          |                7 |             12 |
-|  n_0_5515_BUFG                |                                  | game_page/pos_x[11]_i_1_n_1          |                3 |             12 |
-|  baud                         |                                  |                                      |                6 |             15 |
-|  clk_IBUF_BUFG                |                                  | controller/counter[31]_i_1_n_1       |               12 |             32 |
+|  baud                         | uart/transmitter/bit_out_i_2_n_0 | uart/transmitter/bit_out_i_1_n_0     |                1 |              1 |
+|  controller/page_num_reg[0]_0 |                                  |                                      |                1 |              2 |
+|  clk_IBUF_BUFG                |                                  | controller/space17_out               |                2 |              4 |
+|  clk_IBUF_BUFG                |                                  | controller/SS[0]                     |                2 |              4 |
+|  clk_IBUF_BUFG                |                                  | controller/SR[0]                     |                1 |              4 |
+|  clk_IBUF_BUFG                |                                  | game_page/SR[0]                      |                4 |              6 |
+|  clk_IBUF_BUFG                | controller/E[0]                  |                                      |                2 |              6 |
+|  baud                         |                                  | uart/receiver/count[7]_i_1_n_0       |                2 |              8 |
+|  baud                         |                                  | uart/transmitter/count[7]_i_1__0_n_0 |                3 |              8 |
+|  baud                         | uart/receiver/E[0]               |                                      |                3 |              8 |
+|  baud                         | uart/transmitter/temp[7]_i_1_n_0 |                                      |                3 |              8 |
+|  clk_IBUF_BUFG                |                                  | controller/SS[1]                     |                4 |              8 |
+|  clk_IBUF_BUFG                |                                  | controller/SR[1]                     |                3 |              8 |
+|  vga/line_clk_reg_n_0         |                                  | vga/v_val[9]_i_1_n_0                 |                5 |             10 |
+|  vga/E[0]                     |                                  |                                      |                4 |             10 |
+|  vga/pix_stb                  |                                  | vga/clear                            |                5 |             11 |
+|  clk_IBUF_BUFG                |                                  |                                      |                7 |             12 |
+|  baud                         |                                  |                                      |                7 |             15 |
+|  clk_IBUF_BUFG                |                                  | controller/counter[31]_i_1_n_0       |               15 |             32 |
 |  clk_IBUF_BUFG                |                                  | uart/baudrate_gen/clear              |                8 |             32 |
-|  n_0_5515_BUFG                |                                  | game_page/clear                      |               15 |             32 |
-|  n_0_5515_BUFG                |                                  |                                      |               29 |             64 |
+|  clk_IBUF_BUFG                | controller/page_num_reg[1]_2[0]  | controller/clear                     |               18 |             32 |
+|  clk_IBUF_BUFG                | controller/page_num_reg[1]_2[0]  |                                      |               30 |             66 |
 +-------------------------------+----------------------------------+--------------------------------------+------------------+----------------+
 
 

@@ -25,7 +25,8 @@ module menu_page(
     input [11:0] x, y, 
     output reg [2:0] rgb,
     input left, right,
-    output reg [1:0] selection
+    output reg [1:0] selection,
+    input [5:0] player_hp, monster_hp 
     );
         
     wire fight_on, act_on, item_on, mercy_on;
@@ -43,8 +44,18 @@ module menu_page(
         else if (item_on) rgb <= (selection == 2) ? 3'b101 : item_rgb;
         else if (mercy_on) rgb <= (selection == 3) ? 3'b101 : mercy_rgb;
         
+        // draw monster HP bar
+        else if (x > 100 && x < 100+ (monster_hp * 10) && y > 350 && y < 360)
+            rgb <= 3'b100; // GREEN
+
+        // draw player HP bar
+        else if (x > 100 && x < 100+ (player_hp * 10) && y > 370 && y < 375)
+            rgb <= 3'b101; // YELLOW
+        
         // draw nothing
         else rgb <= 3'b000; // BLACK
+        
+
     end
     
     always @(posedge clk && on) begin

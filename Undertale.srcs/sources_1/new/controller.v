@@ -27,18 +27,21 @@ module controller(
     input [1:0] selection,
     output reg [1:0] page_num,
     output reg up, left, down, right, space,
-    input game_over, defeat_enemy,
-    output end_fight
+    input wire game_over, defeat_enemy,
+    output wire damage, end_fight
     );
     
     reg change_page = 0;
     reg push = 0;
     reg end_fight_reg=0;
+    reg damage_reg;
     integer counter = 0;
     
     initial page_num = 0;
     
     always @(posedge clk) begin
+        // init damage_reg 
+        damage_reg = 0;
         // game over || defeat enemy -> go back to start page 
         if (game_over==1 || defeat_enemy==1) begin
             page_num = 0;
@@ -69,7 +72,7 @@ module controller(
                 change_page = 0;
                 if (page_num == 0) page_num = 1;
                 else if (page_num == 1) begin 
-                    if (selection == 0) begin page_num = 2; counter = 0; end // select fight --> fight
+                    if (selection == 0) begin page_num = 2; counter = 0; damage_reg=1; end // select fight --> fight
                     else if (selection == 3) page_num = 0; // select mercy --> exit
                 end
             end
@@ -89,6 +92,6 @@ module controller(
 
     end
     
-    assign end_fight = (end_fight_reg==1) ? 1:0;
-    
+    assign end_fight = (page_num != 2) ? 1:0;
+    assign damage = damage_reg;    
 endmodule

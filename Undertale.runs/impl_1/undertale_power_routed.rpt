@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Mon May 25 19:22:58 2020
+| Date             : Tue May 26 01:59:29 2020
 | Host             : DESKTOP-9OGL4CH running 64-bit major release  (build 9200)
 | Command          : report_power -file undertale_power_routed.rpt -pb undertale_power_summary_routed.pb -rpx undertale_power_routed.rpx
 | Design           : undertale
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.173        |
+| Total On-Chip Power (W)  | 0.177        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.101        |
+| Dynamic (W)              | 0.105        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.1         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        3 |       --- |             --- |
-| Slice Logic    |     0.048 |    11419 |       --- |             --- |
-|   LUT as Logic |     0.046 |     7641 |     20800 |           36.74 |
-|   F7/F8 Muxes  |     0.002 |     2995 |     32600 |            9.19 |
-|   CARRY4       |    <0.001 |      183 |      8150 |            2.25 |
-|   Register     |    <0.001 |      286 |     41600 |            0.69 |
-|   Others       |     0.000 |       34 |       --- |             --- |
+| Slice Logic    |     0.048 |    11481 |       --- |             --- |
+|   LUT as Logic |     0.046 |     7676 |     20800 |           36.90 |
+|   F7/F8 Muxes  |     0.002 |     2989 |     32600 |            9.17 |
+|   CARRY4       |    <0.001 |      195 |      8150 |            2.39 |
+|   Register     |    <0.001 |      296 |     41600 |            0.71 |
+|   Others       |     0.000 |       38 |       --- |             --- |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-| Signals        |     0.044 |     5122 |       --- |             --- |
+| Signals        |     0.049 |     5163 |       --- |             --- |
 | DSPs           |     0.005 |        5 |        90 |            5.56 |
 | I/O            |    <0.001 |       17 |       106 |           16.04 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.173 |          |           |                 |
+| Total          |     0.177 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.110 |       0.101 |      0.010 |
+| Vccint    |       1.000 |     0.114 |       0.104 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -143,16 +143,15 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| undertale          |     0.101 |
-|   controller       |     0.001 |
+| undertale          |     0.105 |
 |   game_page        |     0.003 |
-|   intro_page       |     0.082 |
+|   intro_page       |     0.086 |
 |   menu_page        |     0.012 |
-|     nolabel_line34 |     0.002 |
 |     nolabel_line35 |     0.002 |
 |     nolabel_line36 |     0.002 |
 |     nolabel_line37 |     0.002 |
-|   vga              |     0.001 |
+|     nolabel_line38 |     0.002 |
+|   vga              |     0.002 |
 +--------------------+-----------+
 
 
