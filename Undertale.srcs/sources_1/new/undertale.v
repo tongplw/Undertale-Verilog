@@ -28,6 +28,8 @@ module undertale(
     output Hsync, Vsync
     );
     
+    localparam hitDamage = 5;
+    
     wire [1:0] page_num;
     wire ena, de;
     wire up, left, down, right, space;
@@ -37,14 +39,16 @@ module undertale(
     wire [11:0] rgb;
     wire game_on, faim_on;
     wire [1:0] selection;
-    wire game_over, defeat_enemy, end_fight;
+    wire game_over, defeat_enemy, damage, collision1, collision2, end_fight;
     
+    reg [5:0] player_hp = 20;
+    reg [5:0] monster_hp = 20;
     
     // Read Image File
     intro_page intro_page(x, y, intro_rgb);
-    menu_page menu_page(clk, page_num==1, x, y, faim_rgb, left, right, selection);
+    menu_page menu_page(clk, page_num==1, x, y, faim_rgb, left, right, selection, player_hp, monster_hp);
     game_page game_page(clk, page_num==2, x, y, game_rgb, up, left, down, right, space,
-                        game_over, defeat_enemy, end_fight, page_num);
+                        game_over, defeat_enemy, player_hp, monster_hp, collision1, collision2, page_num, end_fight);
     color_decode color_decode(selected_rgb, rgb);
     
     assign selected_rgb = (page_num == 0) ? intro_rgb : (page_num == 1) ? faim_rgb : game_rgb;
@@ -52,8 +56,20 @@ module undertale(
 
     // ---------------------------------------------------------------------------
     controller controller(clk, command, ena, de, selection, page_num, up, left, down, right, space, 
-                          game_over, defeat_enemy, end_fight);
+                          game_over, defeat_enemy, damage, end_fight);
     vga vga(clk, Hsync, Vsync, x, y, de);
     uart uart(clk, RsRx, RsTx, command, ena);
+    
+    always @(posedge clk) begin
+        if (damage) begin
+            monster_hp = monster_hp -5;     // TODO: change fixed damage to scale damage
+        end
+        if (collision1) begin
+            player_hp = (player_hp -hitDamage <=0) ? 0:player_hp -hitDamage;
+        end
+        if (collision2) begin
+            player_hp = (player_hp -hitDamage <=0) ? 0:player_hp -hitDamage;
+        end
+    end
     
 endmodule
