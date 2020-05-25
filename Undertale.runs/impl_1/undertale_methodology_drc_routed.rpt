@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun May 24 22:03:54 2020
-| Host         : tongplw running 64-bit major release  (build 9200)
+| Date         : Mon May 25 14:24:40 2020
+| Host         : DESKTOP-9OGL4CH running 64-bit major release  (build 9200)
 | Command      : report_methodology -file undertale_methodology_drc_routed.rpt -pb undertale_methodology_drc_routed.pb -rpx undertale_methodology_drc_routed.rpx
 | Design       : undertale
 | Device       : xc7a35tcpg236-1
@@ -23,16 +23,67 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 79
+             Violations found: 89
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
+| TIMING-16 | Warning  | Large setup violation       | 10         |
 | TIMING-17 | Warning  | Non-clocked sequential cell | 69         |
 | TIMING-20 | Warning  | Non-clocked latch           | 10         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.050 ns between game_page/cnt_reg[0]/C (clocked by sys_clk_pin) and game_page/player_hp_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.052 ns between game_page/cnt_reg[0]/C (clocked by sys_clk_pin) and game_page/player_hp_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.203 ns between game_page/cnt_reg[0]/C (clocked by sys_clk_pin) and game_page/player_hp_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.481 ns between game_page/cnt_reg[0]/C (clocked by sys_clk_pin) and game_page/player_hp_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.488 ns between game_page/cnt_reg[0]/C (clocked by sys_clk_pin) and game_page/player_hp_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.520 ns between game_page/cnt_reg[0]/C (clocked by sys_clk_pin) and game_page/player_hp_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -2.164 ns between game_page/cnt_reg[0]/C (clocked by sys_clk_pin) and game_page/player_hp_reg[0]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -2.164 ns between game_page/cnt_reg[0]/C (clocked by sys_clk_pin) and game_page/player_hp_reg[1]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -2.164 ns between game_page/cnt_reg[0]/C (clocked by sys_clk_pin) and game_page/player_hp_reg[3]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -2.164 ns between game_page/cnt_reg[0]/C (clocked by sys_clk_pin) and game_page/player_hp_reg[5]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
 TIMING-17#1 Warning
 Non-clocked sequential cell  
 The clock pin uart/data_in_reg[0]/C is not reached by a timing clock

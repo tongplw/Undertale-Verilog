@@ -25,7 +25,8 @@ module controller(
     input [7:0] command,
     input ena, de,
     output reg [1:0] page_num,
-    output reg up, left, down, right, space
+    output reg up, left, down, right, space,
+    input game_over
     );
     
     reg change_page = 0;
@@ -33,6 +34,10 @@ module controller(
     initial page_num = 0;
     
     always @(posedge clk) begin
+        // game over 
+        if (game_over==1) begin
+            page_num = 0;
+        end 
         if (ena == 1 && push == 0) begin
             push = 1;
             case(command)

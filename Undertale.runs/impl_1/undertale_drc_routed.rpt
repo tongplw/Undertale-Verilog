@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun May 24 22:03:46 2020
-| Host         : tongplw running 64-bit major release  (build 9200)
+| Date         : Mon May 25 14:24:36 2020
+| Host         : DESKTOP-9OGL4CH running 64-bit major release  (build 9200)
 | Command      : report_drc -file undertale_drc_routed.rpt -pb undertale_drc_routed.pb -rpx undertale_drc_routed.rpx
 | Design       : undertale
 | Device       : xc7a35tcpg236-1
@@ -138,7 +138,7 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net faim_page/nolabel_line37/E[0] is a gated clock net sourced by a combinational pin faim_page/nolabel_line37/hex_reg[11]_i_2/O, cell faim_page/nolabel_line37/hex_reg[11]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net color_decode/hex_inferred__0/i__n_0 is a gated clock net sourced by a combinational pin color_decode/hex_inferred__0/i_/O, cell color_decode/hex_inferred__0/i_. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 
