@@ -2,27 +2,200 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Fri May  8 20:37:18 2020
-# Process ID: 19536
-# Current directory: C:/Users/tongplw/Desktop/Undertale
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9132 C:\Users\tongplw\Desktop\Undertale\Undertale.xpr
-# Log file: C:/Users/tongplw/Desktop/Undertale/vivado.log
-# Journal file: C:/Users/tongplw/Desktop/Undertale\vivado.jou
+# Start of session at: Mon May 25 23:45:35 2020
+# Process ID: 1756
+# Current directory: C:/Users/Focus_jk/undertale-verilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent828 C:\Users\Focus_jk\undertale-verilog\Undertale.xpr
+# Log file: C:/Users/Focus_jk/undertale-verilog/vivado.log
+# Journal file: C:/Users/Focus_jk/undertale-verilog\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/tongplw/Desktop/Undertale/Undertale.xpr
+open_project C:/Users/Focus_jk/undertale-verilog/Undertale.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 750.551 ; gain = 172.563
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 696.566 ; gain = 107.020
 update_compile_order -fileset sources_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Fri May  8 20:52:10 2020] Launched synth_1...
-Run output will be captured here: C:/Users/tongplw/Desktop/Undertale/Undertale.runs/synth_1/runme.log
-[Fri May  8 20:52:10 2020] Launched impl_1...
-Run output will be captured here: C:/Users/tongplw/Desktop/Undertale/Undertale.runs/impl_1/runme.log
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon May 25 23:46:18 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+update_compile_order -fileset sources_1
 reset_run synth_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Fri May  8 21:01:22 2020...
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon May 25 23:49:08 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1/runme.log
+[Mon May 25 23:49:08 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon May 25 23:54:27 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1/runme.log
+[Mon May 25 23:54:27 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 3326 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'undertale' is not ideal for floorplanning, since the cellview 'intro_page' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.991 . Memory (MB): peak = 1647.602 ; gain = 5.660
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.992 . Memory (MB): peak = 1647.602 ; gain = 5.660
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1647.602 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 1783.309 ; gain = 967.027
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AA0D5BA
+set_property PROGRAM.FILE {C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/undertale.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/undertale.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 26 00:01:07 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1/runme.log
+[Tue May 26 00:01:07 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/undertale.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 26 00:06:37 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1/runme.log
+[Tue May 26 00:06:37 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/undertale.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/undertale.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 26 00:13:43 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1/runme.log
+[Tue May 26 00:13:43 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 26 00:19:00 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1/runme.log
+[Tue May 26 00:19:00 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 26 00:24:02 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1/runme.log
+[Tue May 26 00:24:02 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 26 00:26:20 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1/runme.log
+[Tue May 26 00:26:20 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 26 00:33:18 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1/runme.log
+[Tue May 26 00:33:18 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/undertale.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/undertale.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 26 00:39:28 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1/runme.log
+[Tue May 26 00:39:28 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/undertale.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 26 00:45:54 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1/runme.log
+[Tue May 26 00:45:54 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 26 00:51:07 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1/runme.log
+[Tue May 26 00:51:07 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 26 01:06:14 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1/runme.log
+[Tue May 26 01:06:14 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Focus_jk/undertale-verilog/Undertale.runs/impl_1/undertale.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.

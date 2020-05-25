@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon May 25 00:33:50 2020
-| Host         : tongplw running 64-bit major release  (build 9200)
+| Date         : Tue May 26 01:10:50 2020
+| Host         : DESKTOP-O7TS3PR running 64-bit major release  (build 9200)
 | Command      : report_methodology -file undertale_methodology_drc_routed.rpt -pb undertale_methodology_drc_routed.pb -rpx undertale_methodology_drc_routed.rpx
 | Design       : undertale
 | Device       : xc7a35tcpg236-1
@@ -23,16 +23,22 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 79
+             Violations found: 86
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
+| TIMING-14 | Warning  | LUT on the clock tree       | 1          |
 | TIMING-17 | Warning  | Non-clocked sequential cell | 69         |
-| TIMING-20 | Warning  | Non-clocked latch           | 10         |
+| TIMING-20 | Warning  | Non-clocked latch           | 16         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-14#1 Warning
+LUT on the clock tree  
+The LUT game_page/tap/tap_pos_x[11]_i_9 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
 TIMING-17#1 Warning
 Non-clocked sequential cell  
 The clock pin uart/data_in_reg[0]/C is not reached by a timing clock
@@ -426,6 +432,36 @@ Related violations: <none>
 TIMING-20#10 Warning
 Non-clocked latch  
 The latch color_decode/hex_reg[8] cannot be properly analyzed as its control pin color_decode/hex_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch game_page/monster_hp_reg[0] cannot be properly analyzed as its control pin game_page/monster_hp_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch game_page/monster_hp_reg[1] cannot be properly analyzed as its control pin game_page/monster_hp_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch game_page/monster_hp_reg[2] cannot be properly analyzed as its control pin game_page/monster_hp_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch game_page/monster_hp_reg[3] cannot be properly analyzed as its control pin game_page/monster_hp_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch game_page/monster_hp_reg[4] cannot be properly analyzed as its control pin game_page/monster_hp_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch game_page/monster_hp_reg[5] cannot be properly analyzed as its control pin game_page/monster_hp_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 

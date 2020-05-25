@@ -22,8 +22,10 @@
 module game_page(
     input clk,
     input [11:0] x, y, 
+    input page_num,
     output reg [2:0] rgb,
-    input up, left, down, right, space
+    input up, left, down, right, space,
+    output move_enable
     );
     
     parameter size_out = 60;
@@ -40,9 +42,14 @@ module game_page(
     wire soul_on;
     wire [2:0] soul_rgb;
     
+    //tap
+    wire [5:0] damage;
+    wire in_tap;
+    
     // read red_heart image
     image #("soul.list", soul_width, soul_height)(x - pos_x, y - pos_y, soul_rgb, soul_on);
-
+    tap tap(clk, space, x, y, move_enable, damage, in_tap);
+        
     always @(x or y) begin
         // draw a red heart
         if (soul_on)
@@ -56,27 +63,46 @@ module game_page(
         // draw monster HP bar
         else if (x > 100 && x < monster_hp * 15 && y > 350 && y < 360)
             rgb <= 3'b100; // GREEN
-
+        // focus outline monster HP bar
+        else if (x > 100 && x < monster_hp * 15 && (y == 350 || y == 360))
+            rgb <= 3'b111; // WHITE
+            
         // draw player HP bar
         else if (x > 100 && x < player_hp * 15 && y > 370 && y < 375)
             rgb <= 3'b101; // YELLOW
+        // focus outline player HP bar
+        else if (x > 100 && x < player_hp * 15 && (y == 370 || y == 375))
+            rgb <= 3'b111; // WHITE
             
+        // tap
+        else if (in_tap) 
+            rgb <= 3'b111; // WHITE
+        
         // draw nothing
         else rgb <= 3'b000; // BLACK        
     end
         
-    always @(posedge clk) begin
-        // move red dot
-        if (up) pos_y = pos_y - speed;
-        if (down) pos_y = pos_y + speed;
-        if (left) pos_x = pos_x - speed;
-        if (right) pos_x = pos_x + speed;
+    always @(posedge clk) begin    
+        if(move_enable) begin
+            // move red dot
+            if (up) pos_y = pos_y - speed;
+            if (down) pos_y = pos_y + speed;
+            if (left) pos_x = pos_x - speed;
+            if (right) pos_x = pos_x + speed;
         
-        // boundaries collision
-        if (pos_x < 320 - size_in) pos_x = 320 - size_in + 1;
-        if (pos_x > 320 + size_in - soul_width) pos_x = 320 + size_in - soul_width;
-        if (pos_y < 240 - size_in) pos_y = 240 - size_in + 1;
-        if (pos_y > 240 + size_in - soul_height) pos_y = 240 + size_in - soul_height; 
+            // boundaries collision
+            if (pos_x < 320 - size_in) pos_x = 320 - size_in + 1;
+            if (pos_x > 320 + size_in - soul_width) pos_x = 320 + size_in - soul_width;
+            if (pos_y < 240 - size_in) pos_y = 240 - size_in + 1;
+            if (pos_y > 240 + size_in - soul_height) pos_y = 240 + size_in - soul_height; 
+        end
+    end
+    
+    //here
+    always @(move_enable) begin
+        if(move_enable == 1)
+            if(damage <= monster_hp) monster_hp = monster_hp - damage;
+            else monster_hp = 0;
     end
 
 endmodule

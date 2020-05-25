@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/tongplw/Desktop/undertale-verilog/Undertale.runs/synth_1'
+HD_PWD='C:/Users/Focus_jk/undertale-verilog/Undertale.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
