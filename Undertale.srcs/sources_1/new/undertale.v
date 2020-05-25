@@ -43,19 +43,20 @@ module undertale(
     
     reg [5:0] player_hp = 20;
     reg [5:0] monster_hp = 20;
+    wire move_enable;
     
     // Read Image File
     intro_page intro_page(x, y, intro_rgb);
     menu_page menu_page(clk, page_num==1, x, y, faim_rgb, left, right, selection, player_hp, monster_hp);
     game_page game_page(clk, page_num==2, x, y, game_rgb, up, left, down, right, space,
-                        game_over, defeat_enemy, player_hp, monster_hp, collision1, collision2, page_num, end_fight);
+                        game_over, defeat_enemy, player_hp, monster_hp, collision1, collision2, page_num, end_fight, move_enable);
     color_decode color_decode(selected_rgb, rgb);
     
     assign selected_rgb = (page_num == 0) ? intro_rgb : (page_num == 1) ? faim_rgb : game_rgb;
     assign {vgaRed, vgaGreen, vgaBlue} = (de) ? rgb : 12'h000;
 
     // ---------------------------------------------------------------------------
-    controller controller(clk, command, ena, de, selection, page_num, up, left, down, right, space, 
+    controller controller(clk, command, ena, de, selection, move_enable, page_num, up, left, down, right, space, 
                           game_over, defeat_enemy, damage, end_fight);
     vga vga(clk, Hsync, Vsync, x, y, de);
     uart uart(clk, RsRx, RsTx, command, ena);

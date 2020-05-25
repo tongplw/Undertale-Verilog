@@ -21,14 +21,15 @@
 
 module game_page(
     input clk, on,
-    input [11:0] x, y, 
+    input [11:0] x, y,
     output reg [2:0] rgb,
     input up, left, down, right, space,
     output wire game_over, defeat_enemy,
     input [5:0] player_hp, monster_hp,
     output wire collision1, collision2,
     input wire [1:0] page_num,
-    input wire end_fight
+    input wire end_fight,
+    output move_enable
     );
     
     parameter size_out = 60;
@@ -56,6 +57,9 @@ module game_page(
     wire soul_on, monster_on_1, monster_on_2;
     wire [2:0] soul_rgb, monster_rgb_1, monster_rgb_2;
     
+    wire [5:0] damage;
+    wire in_tap;
+    
     // read red_heart image
     image #("soul.list", soul_width, soul_height)(x - pos_x, y - pos_y, soul_rgb, soul_on);
 
@@ -63,6 +67,7 @@ module game_page(
     image #("monster_1.list", 100, 100)(x - 270, y - 60, monster_rgb_1, monster_on_1);
     image #("monster_2.list", 100, 100)(x - 270, y - 60, monster_rgb_2, monster_on_2);
 
+    tap tap(clk, space, x, y, move_enable, damage, in_tap, on);
     always @(x or y) begin
 
         // draw a red heart
@@ -87,6 +92,10 @@ module game_page(
         // draw player HP bar
         else if (x > 100 && x < 100+ (player_hp * 10) && y > 370 && y < 375)
             rgb <= 3'b101; // YELLOW
+        
+        // tap
+        else if (in_tap) 
+            rgb <= 3'b111; // WHITE
             
         // draw nothing
         else rgb <= 3'b000; // BLACK     
@@ -106,7 +115,7 @@ module game_page(
 //    end
     
     always @(posedge clk) begin
-        if (on) begin
+        if (on && move_enable) begin
             // monster duk-dik
             monster_cnt = monster_cnt + 1;
             if (monster_cnt == 5 * 10**7) begin
@@ -177,6 +186,12 @@ module game_page(
 //        bullet2_hit = 0;
 //        pos_x = 320 - soul_width / 2;
 //        pos_y = 240 - soul_height / 2;
+//    end
+//    always @(move_enable) begin
+//        if(move_enable == 1)
+//            if(damage <= monster_hp) monster_hp = monster_hp - damage;
+//            else monster_hp = 0;
+//    end
 //    end
     
 

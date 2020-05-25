@@ -25,6 +25,7 @@ module controller(
     input [7:0] command,
     input ena, de,
     input [1:0] selection,
+    input move_enable,
     output reg [1:0] page_num,
     output reg up, left, down, right, space,
     input wire game_over, defeat_enemy,
@@ -79,7 +80,7 @@ module controller(
         end
         
         // wait for 6 seconds = 6 * 100 MHz
-        if (page_num == 2) begin
+        if (page_num == 2 && move_enable == 1) begin
             counter = counter + 1;
             if (counter == 6 * 10**8) begin
                 page_num = 1;
