@@ -26,16 +26,23 @@ module controller(
     input ena, de,
     input [1:0] selection,
     output reg [1:0] page_num,
-    output reg up, left, down, right, space
+    output reg up, left, down, right, space,
+    input game_over, defeat_enemy,
+    output end_fight
     );
     
     reg change_page = 0;
     reg push = 0;
+    reg end_fight_reg=0;
     integer counter = 0;
     
     initial page_num = 0;
     
     always @(posedge clk) begin
+        // game over || defeat enemy -> go back to start page 
+        if (game_over==1 || defeat_enemy==1) begin
+            page_num = 0;
+        end
         if (ena == 1 && push == 0) begin
             push = 1;
             case(command)
@@ -73,9 +80,15 @@ module controller(
             counter = counter + 1;
             if (counter == 6 * 10**8) begin
                 page_num = 1;
+                end_fight_reg = 1;  // signal to damage enemy
+                counter = 0;        // reset counter just in case
             end
+            else 
+                end_fight_reg = 0;
         end
 
     end
+    
+    assign end_fight = (end_fight_reg==1) ? 1:0;
     
 endmodule

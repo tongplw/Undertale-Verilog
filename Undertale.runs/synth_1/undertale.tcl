@@ -23,31 +23,31 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/tongplw/Desktop/undertale-verilog/Undertale.cache/wt [current_project]
-set_property parent.project_path C:/Users/tongplw/Desktop/undertale-verilog/Undertale.xpr [current_project]
+set_property webtalk.parent_dir D:/workspace/undertale-verilog/Undertale.cache/wt [current_project]
+set_property parent.project_path D:/workspace/undertale-verilog/Undertale.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/tongplw/Desktop/undertale-verilog/Undertale.cache/ip [current_project]
+set_property ip_output_repo d:/workspace/undertale-verilog/Undertale.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_mem {
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro.list
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/soul.list
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/fight_but.list
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/act_but.list
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/item_but.list
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/mercy_but.list
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/intro.list
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/soul.list
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/fight_but.list
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/act_but.list
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/item_but.list
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/mercy_but.list
 }
 read_verilog -library xil_defaultlib {
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/controller.v
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/game_page.v
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/image.v
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/menu_page.v
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/uart.v
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/vga.v
-  C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/color_decode.v
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/controller.v
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/game_page.v
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/image.v
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/intro_page.v
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/menu_page.v
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/uart.v
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/vga.v
+  D:/workspace/undertale-verilog/Undertale.srcs/sources_1/new/undertale.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -57,8 +57,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/constrs_1/new/Basys 3 Master.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/tongplw/Desktop/undertale-verilog/Undertale.srcs/constrs_1/new/Basys 3 Master.xdc}}]
+read_xdc {{D:/workspace/undertale-verilog/Undertale.srcs/constrs_1/new/Basys 3 Master.xdc}}
+set_property used_in_implementation false [get_files {{D:/workspace/undertale-verilog/Undertale.srcs/constrs_1/new/Basys 3 Master.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

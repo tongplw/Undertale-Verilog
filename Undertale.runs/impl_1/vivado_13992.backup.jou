@@ -2,11 +2,11 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Mon May 25 01:25:33 2020
-# Process ID: 11388
-# Current directory: C:/Users/tongplw/Desktop/undertale-verilog/Undertale.runs/impl_1
+# Start of session at: Mon May 25 17:07:37 2020
+# Process ID: 13992
+# Current directory: D:/workspace/undertale-verilog/Undertale.runs/impl_1
 # Command line: vivado.exe -log undertale.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source undertale.tcl -notrace
-# Log file: C:/Users/tongplw/Desktop/undertale-verilog/Undertale.runs/impl_1/undertale.vdi
-# Journal file: C:/Users/tongplw/Desktop/undertale-verilog/Undertale.runs/impl_1\vivado.jou
+# Log file: D:/workspace/undertale-verilog/Undertale.runs/impl_1/undertale.vdi
+# Journal file: D:/workspace/undertale-verilog/Undertale.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source undertale.tcl -notrace

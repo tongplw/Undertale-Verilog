@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon May 25 01:52:20 2020
-| Host         : tongplw running 64-bit major release  (build 9200)
+| Date         : Mon May 25 19:19:39 2020
+| Host         : DESKTOP-9OGL4CH running 64-bit major release  (build 9200)
 | Command      : report_drc -file undertale_drc_opted.rpt -pb undertale_drc_opted.pb -rpx undertale_drc_opted.rpx
 | Design       : undertale
 | Device       : xc7a35tcpg236-1
@@ -24,14 +24,14 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 22
+             Violations found: 21
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
 | DPIP-1      | Warning  | Input pipelining                                            | 10         |
 | DPOP-1      | Warning  | PREG Output pipelining                                      | 5          |
 | DPOP-2      | Warning  | MREG Output pipelining                                      | 5          |
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
 +-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -137,12 +137,6 @@ DSP menu_page/nolabel_line37/rgb1 multiplier stage menu_page/nolabel_line37/rgb1
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT controller/pos_x[11]_i_2 is driving clock pin of 24 cells. This could lead to large hold time violations. Involved cells are:
-game_page/pos_x_reg[0], game_page/pos_x_reg[10], game_page/pos_x_reg[11], game_page/pos_x_reg[1], game_page/pos_x_reg[2], game_page/pos_x_reg[3], game_page/pos_x_reg[4], game_page/pos_x_reg[5], game_page/pos_x_reg[6], game_page/pos_x_reg[7], game_page/pos_x_reg[8], game_page/pos_x_reg[9], game_page/pos_y_reg[0], game_page/pos_y_reg[10], game_page/pos_y_reg[11] (the first 15 of 24 listed)
-Related violations: <none>
-
-PLHOLDVIO-2#2 Warning
 Non-Optimal connections which could lead to hold violations  
 A LUT controller/selection[1]_i_2 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
 menu_page/selection_reg[0], menu_page/selection_reg[1]

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon May 25 01:56:08 2020
-| Host         : tongplw running 64-bit major release  (build 9200)
+| Date         : Mon May 25 19:22:51 2020
+| Host         : DESKTOP-9OGL4CH running 64-bit major release  (build 9200)
 | Command      : report_drc -file undertale_drc_routed.rpt -pb undertale_drc_routed.pb -rpx undertale_drc_routed.rpx
 | Design       : undertale
 | Device       : xc7a35tcpg236-1
@@ -24,15 +24,15 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 25
+             Violations found: 23
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
 | DPIP-1      | Warning  | Input pipelining                                            | 10         |
 | DPOP-1      | Warning  | PREG Output pipelining                                      | 5          |
 | DPOP-2      | Warning  | MREG Output pipelining                                      | 5          |
-| PDRC-153    | Warning  | Gated clock check                                           | 3          |
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
+| PDRC-153    | Warning  | Gated clock check                                           | 2          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
 +-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -139,26 +139,15 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net controller/E[0] is a gated clock net sourced by a combinational pin controller/hex_reg[11]_i_2/O, cell controller/hex_reg[11]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net controller/page_num_reg[1]_1 is a gated clock net sourced by a combinational pin controller/selection[1]_i_2/O, cell controller/selection[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net controller/page_num_reg[0]_1 is a gated clock net sourced by a combinational pin controller/selection[1]_i_2/O, cell controller/selection[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#3 Warning
-Gated clock check  
-Net controller/page_num_reg[1]_1 is a gated clock net sourced by a combinational pin controller/pos_x[11]_i_2/O, cell controller/pos_x[11]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net vga/E[0] is a gated clock net sourced by a combinational pin vga/hex_reg[11]_i_2/O, cell vga/hex_reg[11]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT controller/pos_x[11]_i_2 is driving clock pin of 24 cells. This could lead to large hold time violations. Involved cells are:
-game_page/pos_x_reg[0], game_page/pos_x_reg[10], game_page/pos_x_reg[11], game_page/pos_x_reg[1], game_page/pos_x_reg[2], game_page/pos_x_reg[3], game_page/pos_x_reg[4], game_page/pos_x_reg[5], game_page/pos_x_reg[6], game_page/pos_x_reg[7], game_page/pos_x_reg[8], game_page/pos_x_reg[9], game_page/pos_y_reg[0], game_page/pos_y_reg[10], game_page/pos_y_reg[11] (the first 15 of 24 listed)
-Related violations: <none>
-
-PLHOLDVIO-2#2 Warning
 Non-Optimal connections which could lead to hold violations  
 A LUT controller/selection[1]_i_2 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
 menu_page/selection_reg[0], menu_page/selection_reg[1]
