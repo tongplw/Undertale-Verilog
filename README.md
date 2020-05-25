@@ -1,3 +1,0 @@
-# undertale-verilog
-
-bugs alert!!!
