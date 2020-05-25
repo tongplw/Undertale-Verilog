@@ -45,11 +45,11 @@ unisims
 *.lib
 
 ## dirs
-vivado.cache/
-vivado.hw/
-vivado.ip_user_files/
-vivado.runs/
-vivado.sim/
+Undertale.cache/
+Undertale.hw/
+Undertale.ip_user_files/
+Undertale.runs/
+Undertale.sim/
 
 ###### for Xilinx Vivado|ISE
 .Xil/
