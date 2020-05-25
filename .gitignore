@@ -1,63 +1,73 @@
-*
-!*/
-!.gitignore
-!*.vhd
-!*.v
-!*.bd
-!*.edif
+#########################################################################################
+##  Project    : Collect of various scripts for working with EDA-tools (ASIC/FPGA/etc) ##
+##  Link       : https://github.com/iDoka/eda-scripts                                  ##
+##  Description: .gitignore                                                            ##
+##  Usage      : just rename or add contain to .gitignore                              ##
+##  License    : MIT                                                                   ##
+#########################################################################################
 
-# large and conflictable folder
-Undertale.sim/
-Undertale.cache/
-Undertale.runs/
+## log files
+*.log
+*.jou
+*.rpt
+*.vdi
 
-# IP files
-!*.xci
-!*.dcp
-!*.vds
-!*.pb
-!*.ui
-!*.ooc
+## bitstream
+*.bit
+*.bin
+*.mcs
+*.svf
+*.image
 
-# System Generator
-!*.mdl
-!*.slx
-!*.bxml
+## netlist
+*.edf
+*.edif
+*.vn
+*.vm
 
-# Simulation logic analyzer
-!*.wcfg
-!*.coe
+## SDF
+*.sdf
 
-# MIG
-!*.prj
-!*.mem
+## sim dump
+*.vcd
+*.saif
+*.tcf
+*.wdb
 
-# Project files
-!*.xpr
-!*.xml
+## others
+unisims
 
-# Constraint files
-!*.xdc
+## C-files
+*.elf
+*.a
+*.sa
+*.so
+*.lib
 
-# TCL - files
-!*.tcl
+## dirs
+vivado.cache/
+vivado.hw/
+vivado.ip_user_files/
+vivado.runs/
+vivado.sim/
 
-# Journal - files
-!*.jou
+###### for Xilinx Vivado|ISE
+.Xil/
+.cache/
+fsm_encoding.os
+tab_*/
+webtalk.*
+vivado_pid*.str
+hs_err_pid*
+xelab.*
+xsim.*
+xvlog.*
+*.cache
+*.sim
+*.runs
+*.hw
+*.backup.*
+*.debug
 
-# Reports
-!*.rpt
-!*.txt
-!*.vdi
-
-# C-files
-!*.c
-!*.h
-!*.elf
-!*.bmm
-!*.xmp
-
-# additions
-!*.data
-!*.pdf
-!*.list
+## checkpoint files
+*.dcp
