@@ -1,63 +1,73 @@
-*
-!*/
-!.gitignore
-!*.vhd
-!*.v
-!*.bd
-!*.edif
+#########################################################################################
+##  Project    : Collect of various scripts for working with EDA-tools (ASIC/FPGA/etc) ##
+##  Link       : https://github.com/iDoka/eda-scripts                                  ##
+##  Description: .gitignore                                                            ##
+##  Usage      : just rename or add contain to .gitignore                              ##
+##  License    : MIT                                                                   ##
+#########################################################################################
 
-# large and conflictable folder
-Undertale.sim/
+## log files
+*.log
+*.jou
+*.rpt
+*.vdi
+
+## bitstream
+*.bit
+*.bin
+*.mcs
+*.svf
+*.image
+
+## netlist
+*.edf
+*.edif
+*.vn
+*.vm
+
+## SDF
+*.sdf
+
+## sim dump
+*.vcd
+*.saif
+*.tcf
+*.wdb
+
+## others
+unisims
+
+## C-files
+*.elf
+*.a
+*.sa
+*.so
+*.lib
+
+## dirs
 Undertale.cache/
+Undertale.hw/
+Undertale.ip_user_files/
 Undertale.runs/
+Undertale.sim/
 
-# IP files
-!*.xci
-!*.dcp
-!*.vds
-!*.pb
-!*.ui
-!*.ooc
+###### for Xilinx Vivado|ISE
+.Xil/
+.cache/
+fsm_encoding.os
+tab_*/
+webtalk.*
+vivado_pid*.str
+hs_err_pid*
+xelab.*
+xsim.*
+xvlog.*
+*.cache
+*.sim
+*.runs
+*.hw
+*.backup.*
+*.debug
 
-# System Generator
-!*.mdl
-!*.slx
-!*.bxml
-
-# Simulation logic analyzer
-!*.wcfg
-!*.coe
-
-# MIG
-!*.prj
-!*.mem
-
-# Project files
-!*.xpr
-!*.xml
-
-# Constraint files
-!*.xdc
-
-# TCL - files
-!*.tcl
-
-# Journal - files
-!*.jou
-
-# Reports
-!*.rpt
-!*.txt
-!*.vdi
-
-# C-files
-!*.c
-!*.h
-!*.elf
-!*.bmm
-!*.xmp
-
-# additions
-!*.data
-!*.pdf
-!*.list
+## checkpoint files
+*.dcp
