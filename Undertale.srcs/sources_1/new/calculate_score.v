@@ -22,6 +22,7 @@
 
 module calculate_score(
         input [11:0] x,
+        input move_enable,
         output reg [5:0] damage
     );
     always @(x) begin

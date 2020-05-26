@@ -29,7 +29,9 @@ module game_page(
     output wire collision1, collision2,
     input wire [1:0] page_num,
     input wire end_fight,
-    output move_enable
+    output wire move_enable,
+    output wire monster_damage,
+    output wire monster_damage_enable
     );
     
     parameter size_out = 60;
@@ -57,7 +59,7 @@ module game_page(
     
     wire [5:0] damage;
     wire in_tap;
-    
+    reg tap_set = 0;
     // read red_heart image
     image #("soul.list", soul_width, soul_height)(x - pos_x, y - pos_y, soul_rgb, soul_on);
 
@@ -65,7 +67,7 @@ module game_page(
     image #("monster_1.list", 100, 100)(x - 270, y - 60, monster_rgb_1, monster_on_1);
     image #("monster_2.list", 100, 100)(x - 270, y - 60, monster_rgb_2, monster_on_2);
 
-    tap tap(clk, space, x, y, move_enable, damage, in_tap, on);
+    tap tap(tap_set, clk, space, x, y, move_enable, monster_damage, in_tap, on, monster_damage_enable);
     always @(x or y) begin
 
         // draw a red heart
@@ -107,12 +109,10 @@ module game_page(
         end   
     end
         
-//    always @(posedge on) begin
-//        pos_x <= 320 - soul_width / 2;
-//        pos_y <= 240 - soul_height / 2;
-//    end
     
     always @(posedge clk) begin
+        tap_set = 0;
+        if (!on) tap_set = 1;
         if (on && move_enable) begin
             // monster duk-dik
             monster_cnt = monster_cnt + 1;

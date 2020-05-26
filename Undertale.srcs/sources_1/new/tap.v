@@ -21,13 +21,15 @@
 
 
 module tap(
+        input tap_set,
         input clk,
         input space,
         input [11:0] x, y,
         output reg move_enable,
-        output [5:0] damage,
+        output reg [5:0] monster_damage,
         output reg in_tap,
-        input on
+        input on,
+        output reg monster_damage_enable
     );
 
     parameter tap_width = 3; // width = 5
@@ -37,9 +39,10 @@ module tap(
     reg [11:0] tap_pos_x = tap_min;
     reg [20:0] counting = 0;
     reg tap_direction = 1;
+    initial monster_damage_enable = 0;
     initial move_enable = 0;
-
-    calculate_score calculate_score(tap_pos_x, damage);
+    wire damage;
+    calculate_score calculate_score(tap_pos_x, move_enable, damage);
 
 //    always @(posedge on) begin
 //        move_enable <= 0;
@@ -59,9 +62,14 @@ module tap(
             in_tap <= 1;
         else in_tap <= 0;
     end
+    
+//    always @(posedge tap_set) begin
+//        monster_damage_enable = 0;
+//        move_enable = 0;
+//    end
 
-    always @(posedge clk && !move_enable) begin
-        if(counting == 0) begin
+    always @(posedge clk) begin
+        if(counting == 0 && !move_enable) begin
             if(tap_direction) begin
                 if(tap_pos_x < tap_max) tap_pos_x = tap_pos_x + 1;
                 else begin
@@ -77,10 +85,18 @@ module tap(
                 end
             end
         end
-
+        monster_damage = 0;
+        monster_damage_enable = 0;
         //stop tap
-        if (space) begin
+        if (space && !move_enable) begin
             move_enable = 1;
+            monster_damage = damage;
+            monster_damage_enable = 1;
+        end
+        
+        if(tap_set) begin
+            monster_damage_enable = 0;
+            move_enable = 0;
         end
 
         counting = counting + 1;
