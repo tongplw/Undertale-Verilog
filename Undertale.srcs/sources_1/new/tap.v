@@ -34,8 +34,8 @@ module tap(
 
     parameter tap_width = 3; // width = 5
     parameter tap_height = 20;
-    parameter tap_max = 370;
-    parameter tap_min = 270;
+    parameter tap_max = 220;
+    parameter tap_min = 120;
     reg [11:0] tap_pos_x = tap_min;
     reg [20:0] counting = 0;
     reg tap_direction = 1;
@@ -50,15 +50,15 @@ module tap(
 //    end
 
     always @(x or y) begin
-        if (y > 60 && y < 80) begin
-            if(x > 315 && x < 325)
+        if (y > 270 && y < 290) begin
+            if(x > 165 && x < 175)
                 in_tap <= 1;
-            else if (x == 305 || x == 335 || x == 295 || x == 345)
+            else if (x == 155 || x == 185 || x == 145 || x == 195)
                 in_tap <= 1;
             else
                 in_tap <= 0;
         end
-        else if (x > tap_pos_x - tap_width && x < tap_pos_x + tap_width && y > 85 && y < 85 + tap_height)
+        else if (x > tap_pos_x - tap_width && x < tap_pos_x + tap_width && y > 295 && y < 295 + tap_height)
             in_tap <= 1;
         else in_tap <= 0;
     end
@@ -101,4 +101,5 @@ module tap(
 
         counting = counting + 1;
     end
+ 
 endmodule

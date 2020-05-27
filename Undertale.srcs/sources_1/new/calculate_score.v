@@ -26,9 +26,9 @@ module calculate_score(
         output reg [5:0] damage
     );
     always @(x) begin
-        if(x > 315 && x < 325) damage = 5;
-        else if (x > 305 && x < 335) damage = 3;
-        else if (x > 295 && x < 345) damage = 1;
+        if(x > 165 && x < 175) damage = 5;
+        else if (x > 155 && x < 185) damage = 3;
+        else if (x > 145 && x < 195) damage = 1;
         else damage = 0;
     end
 endmodule
