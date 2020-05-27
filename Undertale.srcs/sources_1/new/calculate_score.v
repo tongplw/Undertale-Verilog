@@ -28,9 +28,9 @@ module calculate_score(
     );
     always @(posedge clk) begin
         if (!move_enable) begin
-            if(x > 315 && x < 325) begin damage <= 5; end
-            else if (x > 305 && x < 335) begin damage <= 3; end
-            else if (x > 295 && x < 345) begin damage <= 1; end
+            if(x > 165 && x < 175) begin damage <= 5; end
+            else if (x > 155 && x < 185) begin damage <= 3; end
+            else if (x > 145 && x < 195) begin damage <= 1; end
             else begin damage <= 0; end
         end
         else 
