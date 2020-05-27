@@ -28,10 +28,10 @@ module game_page(
     input [5:0] player_hp, monster_hp,
     output wire collision1, collision2,
     input wire [1:0] page_num,
-    input wire end_fight,
-    output wire move_enable,
-    output wire [5:0] monster_damage,
-    output wire monster_damage_enable
+    input wire end_fight            // move gauge to select action page
+//    output wire move_enable,
+//    output wire [5:0] monster_damage,
+//    output wire monster_damage_enable
     );
     
     parameter size_out = 60;
@@ -57,9 +57,10 @@ module game_page(
     wire soul_on, monster_on_1, monster_on_2;
     wire [2:0] soul_rgb, monster_rgb_1, monster_rgb_2;
     
-    wire [5:0] damage;
-    wire in_tap;
-    reg tap_set = 0;
+//    wire [5:0] damage;
+//    wire in_tap;
+//    reg tap_set = 0;
+
     // read red_heart image
     image #("soul.list", soul_width, soul_height)(x - pos_x, y - pos_y, soul_rgb, soul_on);
 
@@ -67,7 +68,7 @@ module game_page(
     image #("monster_1.list", 100, 100)(x - 270, y - 60, monster_rgb_1, monster_on_1);
     image #("monster_2.list", 100, 100)(x - 270, y - 60, monster_rgb_2, monster_on_2);
 
-    tap tap(tap_set, clk, space, x, y, move_enable, monster_damage, in_tap, on, monster_damage_enable, page_num);
+//    tap tap(tap_set, clk, space, x, y, move_enable, monster_damage, in_tap, on, monster_damage_enable, page_num);
     always @(x or y) begin
 
         // draw a red heart
@@ -94,8 +95,8 @@ module game_page(
             rgb <= 3'b101; // YELLOW
         
         // tap
-        else if (in_tap) 
-            rgb <= 3'b111; // WHITE
+//        else if (in_tap) 
+//            rgb <= 3'b111; // WHITE
             
         // draw nothing
         else rgb <= 3'b000; // BLACK     
@@ -111,9 +112,9 @@ module game_page(
         
     
     always @(posedge clk) begin
-        tap_set = 0;
-        if (!on) tap_set = 1;
-        if (on && move_enable) begin
+//        tap_set = 0;
+//        if (!on) tap_set = 1;
+        if (on) begin
             // monster duk-dik
             monster_cnt = monster_cnt + 1;
             if (monster_cnt == 5 * 10**7) begin

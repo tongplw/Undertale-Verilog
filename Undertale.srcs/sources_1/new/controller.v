@@ -29,20 +29,24 @@ module controller(
     output reg [1:0] page_num,
     output reg up, left, down, right, space,
     input wire game_over, defeat_enemy,
-    output wire damage, end_fight
+    output wire move, end_fight,
+    input endMove
     );
     
     reg change_page = 0;
     reg push = 0;
     reg end_fight_reg=0;
-    reg damage_reg;
+    reg move_reg;
     integer counter = 0;
     
-    initial page_num = 0;
+    initial begin 
+        page_num = 0;
+        move_reg = 1;
+    end
     
     always @(posedge clk) begin
         // init damage_reg 
-        damage_reg = 0;
+//        move_reg = 1;
         // game over || defeat enemy -> go back to start page 
         if (game_over==1 || defeat_enemy==1) begin
             page_num = 0;
@@ -73,14 +77,25 @@ module controller(
                 change_page = 0;
                 if (page_num == 0) page_num = 1;
                 else if (page_num == 1) begin 
-                    if (selection == 0) begin page_num = 2; counter = 0; damage_reg=1; end // select fight --> fight
+                    if (selection == 0) begin 
+//                        page_num = 2; counter = 0; 
+                        move_reg=0;
+                    end
+                    
                     else if (selection == 3) page_num = 0; // select mercy --> exit
                 end
             end
         end
         
+        if (selection == 0 && page_num == 1 && move_reg == 0) begin 
+            if (endMove) begin
+                page_num = 2;
+                move_reg = 1;
+            end  
+        end
+        
         // wait for 6 seconds = 6 * 100 MHz
-        if (page_num == 2 && move_enable == 1) begin
+        if (page_num == 2) begin  //move_enable == 1) begin
             counter = counter + 1;
             if (counter == 6 * 10**8) begin
                 page_num = 1;
@@ -94,5 +109,5 @@ module controller(
     end
     
     assign end_fight = (page_num != 2) ? 1:0;
-    assign damage = damage_reg;    
+    assign move = move_reg;    
 endmodule

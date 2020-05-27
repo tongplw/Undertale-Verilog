@@ -39,7 +39,7 @@ module undertale(
     wire [11:0] rgb;
     wire game_on, faim_on;
     wire [1:0] selection;
-    wire game_over, defeat_enemy, damage, collision1, collision2, end_fight;
+    wire game_over, defeat_enemy, move, collision1, collision2, end_fight;
     
     reg [5:0] player_hp = 20;
     reg [5:0] monster_hp = 20;
@@ -49,10 +49,11 @@ module undertale(
     
     // Read Image File
     intro_page intro_page(x, y, intro_rgb);
-    menu_page menu_page(clk, page_num==1, x, y, faim_rgb, left, right, selection, player_hp, monster_hp);
+    menu_page menu_page(clk, page_num==1, x, y, faim_rgb, left, right, selection, player_hp, monster_hp,
+                        page_num, space, move_enable, monster_damage, monster_damage_enable, move);
     game_page game_page(clk, page_num==2, x, y, game_rgb, up, left, down, right, space,
                         game_over, defeat_enemy, player_hp, monster_hp, collision1,
-                        collision2, page_num, end_fight, move_enable, monster_damage, monster_damage_enable);
+                        collision2, page_num, end_fight);
     color_decode color_decode(selected_rgb, rgb);
     
     assign selected_rgb = (page_num == 0) ? intro_rgb : (page_num == 1) ? faim_rgb : game_rgb;
@@ -60,7 +61,7 @@ module undertale(
 
     // ---------------------------------------------------------------------------
     controller controller(clk, command, ena, de, selection, move_enable, page_num, up, left, down, right, space, 
-                          game_over, defeat_enemy, damage, end_fight);
+                          game_over, defeat_enemy, move, end_fight, monster_damage_enable);
     vga vga(clk, Hsync, Vsync, x, y, de);
     uart uart(clk, RsRx, RsTx, command, ena);
     

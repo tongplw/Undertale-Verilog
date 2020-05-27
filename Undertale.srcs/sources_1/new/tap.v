@@ -30,7 +30,8 @@ module tap(
         output reg in_tap,
         input on,
         output reg monster_damage_enable,
-        input wire [1:0] page_num
+        input wire [1:0] page_num,
+        input move
     );
 
     parameter tap_width = 3; // width = 5
@@ -41,7 +42,7 @@ module tap(
     reg [20:0] counting = 0;
     reg tap_direction = 1;
     initial monster_damage_enable = 0;
-    initial move_enable = 0;
+    initial move_enable = 1;
     wire [5:0] damage;
     calculate_score calculate_score(clk, tap_pos_x, move_enable, damage);
 
@@ -70,12 +71,16 @@ module tap(
 //    end
 
     always @(posedge clk) begin
+        
+        // move when controller said move
+        move_enable <= move;
+        
         // reset pos when not in fight phase
-        if (page_num!=2) begin
+        if (page_num!=1) begin
             tap_pos_x = tap_min;
         end
         
-        if(counting == 0 && !move_enable) begin
+        if(counting == 0 && !move) begin
             if(tap_direction) begin
                 if(tap_pos_x < tap_max) tap_pos_x = tap_pos_x + 1;
                 else begin
@@ -83,7 +88,7 @@ module tap(
                     tap_direction = 0;
                 end
             end
-            else if (!move_enable) begin
+            else if (!tap_direction) begin
                 if(tap_pos_x > tap_min) tap_pos_x = tap_pos_x - 1;
                 else begin
                     tap_pos_x = tap_pos_x + 1;
@@ -102,7 +107,7 @@ module tap(
         
         if(tap_set) begin
             monster_damage_enable = 0;
-            move_enable = 0;
+            move_enable = 1;
         end
 
         counting = counting + 1;
