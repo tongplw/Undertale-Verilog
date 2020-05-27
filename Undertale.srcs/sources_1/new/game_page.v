@@ -70,43 +70,47 @@ module game_page(
     tap tap(tap_set, clk, space, x, y, move_enable, monster_damage, in_tap, on, monster_damage_enable, page_num);
     always @(x or y) begin
 
-        // draw a red heart
-        if (soul_on)
-            rgb <= soul_rgb;
-            
-        // draw monster
-        else if (monster_on_1 && !monster_show)
-            rgb <= monster_rgb_1;
-        else if (monster_on_2 && monster_show)
-            rgb <= monster_rgb_2;
+        if (move_enable) begin
+            // draw a red heart
+            if (soul_on)
+                rgb <= soul_rgb;
                 
-        // draw white boundaries
-        else if ((x > 320 - size_out && x < 320 + size_out && y > 240 - size_out && y < 240 + size_out) &&
-                !(x > 320 - size_in && x < 320 + size_in && y > 240 - size_in && y < 240 + size_in))
-            rgb <= 3'b111; // WHITE
+            // draw monster
+            else if (monster_on_1 && !monster_show)
+                rgb <= monster_rgb_1;
+            else if (monster_on_2 && monster_show)
+                rgb <= monster_rgb_2;
+                    
+            // draw white boundaries
+            else if ((x > 320 - size_out && x < 320 + size_out && y > 240 - size_out && y < 240 + size_out) &&
+                    !(x > 320 - size_in && x < 320 + size_in && y > 240 - size_in && y < 240 + size_in))
+                rgb <= 3'b111; // WHITE
+        
+            // draw bullets
+            else if (x>bulletPos && x<bulletPos+15 && y>280 && y<284 && ~bullet1_hit && x > 320 - size_in && x < 320 + size_in)
+                rgb <= 3'b111;
+            else if (x>305 && x<309 && y>bulletPos2 && y<bulletPos2+15 && ~bullet2_hit && y > 240 - size_in && y < 240 + size_in)
+                rgb <= 3'b111;
+            
+            // draw nothing
+            else rgb <= 3'b000; // BLACK     
+        end
+        else begin 
+            // draw tap
+            if (in_tap) 
+                rgb <= 3'b111; // WHITE
+        
+            // draw nothing
+            else rgb <= 3'b000; // BLACK     
+        end
         
         // draw monster HP bar
-        else if (x > 100 && x < 100+ (monster_hp * 10) && y > 350 && y < 360)
+        if (x > 100 && x < 100+ (monster_hp * 10) && y > 350 && y < 360)
             rgb <= 3'b100; // GREEN
 
         // draw player HP bar
         else if (x > 100 && x < 100+ (player_hp * 10) && y > 370 && y < 375)
             rgb <= 3'b101; // YELLOW
-        
-        // tap
-        else if (in_tap) 
-            rgb <= 3'b111; // WHITE
-            
-        // draw nothing
-        else rgb <= 3'b000; // BLACK     
-        
-        // bullets 
-        if (x>bulletPos && x<bulletPos+15 && y>280 && y<284 && ~bullet1_hit && x > 320 - size_in && x < 320 + size_in) begin
-            rgb <= 3'b111;
-        end
-        if (x>305 && x<309 && y>bulletPos2 && y<bulletPos2+15 && ~bullet2_hit && y > 240 - size_in && y < 240 + size_in) begin
-            rgb <= 3'b111;
-        end   
     end
         
     
