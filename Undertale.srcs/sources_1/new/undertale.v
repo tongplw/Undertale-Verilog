@@ -44,12 +44,15 @@ module undertale(
     reg [5:0] player_hp = 20;
     reg [5:0] monster_hp = 20;
     wire move_enable;
+    wire [5:0] monster_damage;
+    wire monster_damage_enable;
     
     // Read Image File
     intro_page intro_page(x, y, intro_rgb);
     menu_page menu_page(clk, page_num==1, x, y, faim_rgb, left, right, selection, player_hp, monster_hp);
     game_page game_page(clk, page_num==2, x, y, game_rgb, up, left, down, right, space,
-                        game_over, defeat_enemy, player_hp, monster_hp, collision1, collision2, page_num, end_fight, move_enable);
+                        game_over, defeat_enemy, player_hp, monster_hp, collision1,
+                        collision2, page_num, end_fight, move_enable, monster_damage, monster_damage_enable);
     color_decode color_decode(selected_rgb, rgb);
     
     assign selected_rgb = (page_num == 0) ? intro_rgb : (page_num == 1) ? faim_rgb : game_rgb;
@@ -61,15 +64,22 @@ module undertale(
     vga vga(clk, Hsync, Vsync, x, y, de);
     uart uart(clk, RsRx, RsTx, command, ena);
     
+    
     always @(posedge clk) begin
-        if (damage) begin
-            monster_hp = monster_hp -5;     // TODO: change fixed damage to scale damage
+        if (monster_damage_enable) begin
+            monster_hp = (monster_hp - monster_damage <= 0 || monster_hp - monster_damage >20) ? 0 : monster_hp - monster_damage;
         end
         if (collision1) begin
-            player_hp = (player_hp -hitDamage <=0) ? 0:player_hp -hitDamage;
+            player_hp = (player_hp - hitDamage <=0 || player_hp - hitDamage >20) ? 0 : player_hp - hitDamage;
         end
         if (collision2) begin
-            player_hp = (player_hp -hitDamage <=0) ? 0:player_hp -hitDamage;
+            player_hp = (player_hp - hitDamage <=0 || player_hp - hitDamage >20) ? 0 : player_hp - hitDamage;
+        end
+        
+        // start new game when game over || win
+        if ((game_over || defeat_enemy) && page_num == 0) begin
+            player_hp = 20;
+            monster_hp = 20;
         end
     end
     
