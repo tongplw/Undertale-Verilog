@@ -30,7 +30,7 @@ module game_page(
     input wire [1:0] page_num,
     input wire end_fight,
     output wire move_enable,
-    output wire monster_damage,
+    output wire [5:0] monster_damage,
     output wire monster_damage_enable
     );
     
@@ -40,8 +40,8 @@ module game_page(
     parameter soul_height = 12;
     parameter speed = 2;
     parameter bulletSpeed = 1;
-    parameter bulletStart = 366;
-    parameter bulletStart2  = 240 - size_in +1;
+    parameter bulletStart = 320 + size_out + 15;
+    parameter bulletStart2  = 240 - size_out - 15;
     parameter hitDamage = 5;
     
     reg [11:0] pos_x = 320 - soul_width / 2;
@@ -67,7 +67,7 @@ module game_page(
     image #("monster_1.list", 100, 100)(x - 270, y - 60, monster_rgb_1, monster_on_1);
     image #("monster_2.list", 100, 100)(x - 270, y - 60, monster_rgb_2, monster_on_2);
 
-    tap tap(tap_set, clk, space, x, y, move_enable, monster_damage, in_tap, on, monster_damage_enable);
+    tap tap(tap_set, clk, space, x, y, move_enable, monster_damage, in_tap, on, monster_damage_enable, page_num);
     always @(x or y) begin
 
         // draw a red heart
@@ -101,10 +101,10 @@ module game_page(
         else rgb <= 3'b000; // BLACK     
         
         // bullets 
-        if (x>bulletPos && x<bulletPos+15 && y>280 && y<284 && ~bullet1_hit) begin
+        if (x>bulletPos && x<bulletPos+15 && y>280 && y<284 && ~bullet1_hit && x > 320 - size_in && x < 320 + size_in) begin
             rgb <= 3'b111;
         end
-        if (x>305 && x<309 && y>bulletPos2 && y<bulletPos2+15 && ~bullet2_hit) begin
+        if (x>305 && x<309 && y>bulletPos2 && y<bulletPos2+15 && ~bullet2_hit && y > 240 - size_in && y < 240 + size_in) begin
             rgb <= 3'b111;
         end   
     end
@@ -168,13 +168,18 @@ module game_page(
             bullet2_hit = 0;
             pos_x = 320 - soul_width / 2;
             pos_y = 240 - soul_height / 2;
+            bulletPos = bulletStart;
+            bulletPos2 = bulletStart2;
         end
-        // start over
-//        if ((game_over||defeat_enemy)&&page_num!=2) begin
-//            bullet1_hit = 0;
-//            bullet2_hit = 0;
-//        end 
-        // reset bullets
+        
+        // start over when game over || win
+        if ((game_over||defeat_enemy)&&page_num!=2) begin
+            bullet1_hit = 0;
+            bullet2_hit = 0;
+            bulletPos = bulletStart;
+            bulletPos2 = bulletStart2;
+        end 
+
 
         
     end

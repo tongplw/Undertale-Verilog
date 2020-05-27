@@ -44,7 +44,7 @@ module undertale(
     reg [5:0] player_hp = 20;
     reg [5:0] monster_hp = 20;
     wire move_enable;
-    wire monster_damage;
+    wire [5:0] monster_damage;
     wire monster_damage_enable;
     
     // Read Image File
@@ -67,13 +67,19 @@ module undertale(
     
     always @(posedge clk) begin
         if (monster_damage_enable) begin
-            monster_hp = (monster_hp - monster_damage <= 0) ? 0 : monster_hp - monster_damage;
+            monster_hp = (monster_hp - monster_damage <= 0 || monster_hp - monster_damage >20) ? 0 : monster_hp - monster_damage;
         end
         if (collision1) begin
-            player_hp = (player_hp - hitDamage <=0) ? 0 : player_hp - hitDamage;
+            player_hp = (player_hp - hitDamage <=0 || player_hp - hitDamage >20) ? 0 : player_hp - hitDamage;
         end
         if (collision2) begin
-            player_hp = (player_hp - hitDamage <=0) ? 0 : player_hp - hitDamage;
+            player_hp = (player_hp - hitDamage <=0 || player_hp - hitDamage >20) ? 0 : player_hp - hitDamage;
+        end
+        
+        // start new game when game over || win
+        if ((game_over || defeat_enemy) && page_num == 0) begin
+            player_hp = 20;
+            monster_hp = 20;
         end
     end
     
