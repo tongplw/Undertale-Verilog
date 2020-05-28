@@ -45,8 +45,8 @@ module menu_page(
     always @(posedge clk) begin
         if (selection == 0) begin pos_x = 95; pos_y = 413; end
         else if (selection == 1) begin pos_x = 205; pos_y = 413; end
-        else if (selection == 2) begin pos_x = 315; pos_y = 413; end
-        else if (selection == 4) begin pos_x = 425; pos_y = 413; end
+        else if (selection == 2) begin pos_x = 320; pos_y = 413; end
+        else if (selection == 3) begin pos_x = 425; pos_y = 413; end
     end
 
     always @(x or y) begin
