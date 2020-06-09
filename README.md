@@ -1,3 +1,1 @@
-# undertale-verilog
-
-bugs alert!!!
+# Simple Undertale-like game
