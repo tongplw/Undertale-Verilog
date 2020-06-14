@@ -1,5 +1,8 @@
 # Simple Undertale-like game
 
+![intro page](pic/intro_page.png)
+![game page](pic/game_page.gif)
+
 ## Members
 
 * [Jiraphat Khupanit](https://github.com/focusjk)
